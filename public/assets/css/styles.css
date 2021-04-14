@@ -1,0 +1,101 @@
+.jumbotron{
+  padding: 70px 30px 10px 30px;
+  margin-top:10px;
+  background:white ;
+}
+.row-header {
+  margin: 0px auto;
+  padding: 0px 0px;
+ }
+
+  .row-content {
+    margin: 0px auto;
+    padding: 50px 0px;
+    border-bottom: 1px ridge;
+    min-height: 400px;
+    }
+
+    .address{
+      font-size: 80%;
+      margin: 0px;
+      color: #0f0f0f;
+
+
+    }
+.text3{
+  font-family: gotham;
+  color: #00cecb;
+}
+.text2{
+  font-family: gloss and bloom;
+  color:#0d1010;
+}
+.text{
+
+  font-family: gotham;
+    color:#0d1010;
+
+}
+    .footer{
+
+        background-color: #ced6e0;
+        padding: 20px 0px 20px 0px;
+    }
+    .body{
+    padding:50px 0px 0px 0px;
+    z-index:0;
+}
+
+
+.navbar-dark {
+     background-color: #00cecb;
+}
+.carousel {
+  background:  }
+
+  .carousel .carousel-item {
+
+    height: 600px;
+
+   }
+
+    .carousel .carousel-item img {
+
+      position: absolute;
+      top: 70;
+      height: 700px; }
+
+      .navbar-nav{
+        margin: 10px;
+      }
+
+      .nav-item{
+      margin-right: 50px;
+      margin-left: inherit;
+      }
+      .modal-header{
+          background-color:  #00cecb;
+          color: floralwhite ;
+
+          .close{
+              color: floralwhite;
+          }
+
+      }
+      .modal-body{
+          background:#fffdfd;
+      }
+
+
+.bg{
+  background: #00cecb;
+  width:100%;
+  max-height:auto;
+  margin-top:50px;
+}
+
+.menu{
+  margin-top:50px;
+  font-family: gotham;
+
+}
