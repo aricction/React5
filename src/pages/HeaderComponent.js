@@ -39,13 +39,13 @@ class Header extends Component {
                      </NavItem>
 
                      <NavItem>
-                     <NavLink className="nav-link text-dark" to="">
+                     <NavLink className="nav-link text-dark" to="./story">
                         <span className="bi bi-shop"></span> Our story
                        </NavLink>
                      </NavItem>
 
                      <NavItem>
-                     <NavLink className="nav-link text-dark" to="">
+                     <NavLink className="nav-link text-dark" to="./shop">
                         <span className="bi bi-cart-plus"></span> Order online
                       </NavLink>
                      </NavItem>

@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import Header from './HeaderComponent';
 import { Breadcrumb, BreadcrumbItem } from 'reactstrap';
-import { Link } from 'react-router-dom';
-class Menu extends Component{
+import { Link, NavLink } from 'react-router-dom';
+class Story extends Component{
   render() {
     return (
 
@@ -10,15 +10,17 @@ class Menu extends Component{
          <div className="row">
            <Breadcrumb>
              <BreadcrumbItem><Link to='/home'>Home</Link></BreadcrumbItem>
-             <BreadcrumbItem active> Menu </BreadcrumbItem>
+             <BreadcrumbItem active> Our Story </BreadcrumbItem>
            </Breadcrumb>
           < div className="col-12">
                <div className="text3 row justify-content-center">
-                   <h1> MENU </h1>
+                   <h1> OUR STORY </h1>
                </div>
                 <hr />
            </div>
-            <h2> STARTERS </h2>
+
+          
+
            </div>
            </div>
 
@@ -30,4 +32,4 @@ class Menu extends Component{
   }
 }
 
-export default Menu;
+export default Story;

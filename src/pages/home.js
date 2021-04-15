@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import Header from './HeaderComponent';
+
 class Home extends Component {
 
   constructor(props){

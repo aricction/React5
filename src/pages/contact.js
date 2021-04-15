@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Header from './HeaderComponent';
-import { Breadcrumb, BreadcrumbItem } from 'reactstrap';
+import { Breadcrumb, BreadcrumbItem, Button, Form, FormGroup, Label, Input, Col } from 'reactstrap';
 import { Link, NavLink } from 'react-router-dom';
 class Contact extends Component {
   render(){
@@ -21,7 +21,7 @@ class Contact extends Component {
            <hr />
       </div>
       </div>
-      
+
       <div className="row row-content">
         <div className="col-12">
             <h3>Location information</h3>
