@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Header from './HeaderComponent';
 import { Breadcrumb, BreadcrumbItem } from 'reactstrap';
-import { Link, NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 class Story extends Component{
   render() {
     return (
@@ -19,7 +19,7 @@ class Story extends Component{
                 <hr />
            </div>
 
-          
+
 
            </div>
            </div>
