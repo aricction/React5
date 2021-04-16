@@ -8,10 +8,12 @@ class Header extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      isNavOpen: false
+      isNavOpen: false,
+      isModalOpen: false
     };
     this.toggleNav = this.toggleNav.bind(this);
     this.toggleModal = this.toggleModal.bind(this);
+    this.handleLogin = this.handleLogin.bind(this);
   }
 
   toggleNav(){
@@ -28,18 +30,17 @@ class Header extends Component {
 
   handleLogin(event) {
       this.toggleModal();
-      this.props.loginUser({username: this.username.value, password: this.password.value});
+      alert("Username: " + this.username.value + " Password: " + this.password.value
+            + " Remember: " + this.remember.checked);
       event.preventDefault();
 
   }
 
-  handleLogout() {
-      this.props.logoutUser();
-  }
+
 
   render(){
     return(
-      <div className="Header">
+
       <React.Fragment>
          <Navbar dark expand="md">
          <div className="container">
@@ -87,61 +88,44 @@ class Header extends Component {
                   <Nav className="ml-auto" navbar>
                       <NavItem>
 
-                              <Button>
+                              <Button outline onClick={this.toggleModal}>
                                   <span className="fa fa-sign-in fa-lg"></span> Login
-
-                                      <span className="fa fa-spinner fa-pulse fa-fw"></span>
-                                      : null
-
                               </Button>
-                              :
-                              <div>
-                              <div className="navbar-text mr-3"></div>
-                              <Button >
-                                  <span className="fa fa-sign-out fa-lg"></span> Logout
-                                
-                                      <span className="fa fa-spinner fa-pulse fa-fw"></span>
-                                      : null
-
-                              </Button>
-                              </div>
-
-
                       </NavItem>
                   </Nav>
       </Collapse>
       </div>
       </Navbar>
 
-       <Modal>
+       <Modal isOpen={this.state.isModalOpen} toggle={this.toggleModal}>
          <ModalHeader>Login</ModalHeader>
-         <ModalBody>
-             <Form>
+          <ModalBody>
+             <Form onSubmit={this.handleLogin}>
                 <FormGroup>
                    <Label Htmlfor="username">Username</Label>
-                   <Input type="text" id="username" name="username" />
+                   <Input type="text" id="username" name="username"
+                   innerRef={(input) => this.username = input} />
 
                 </FormGroup>
                 <FormGroup>
                    <Label Htmlfor="password">Password</Label>
-                   <Input type="Password" id="password" name="password" />
+                   <Input type="Password" id="password" name="password"
+                   innerRef={(input) => this.password = input} />
 
                 </FormGroup>
-                <FormGroup>
+                <FormGroup check>
                 <Label check>
-                   <Input type="checkbox" name="remember" />
-                   Remember me
-
+                   <Input type="checkbox" name="remember"
+                      innerRef={(input) => this.remember = input } />
+                      Remember me
                 </Label>
                 </FormGroup>
                 <Button type="submit" value="submit" color="primary">Login</Button>
              </Form>
          </ModalBody>
        </Modal>
+    </React.Fragment>
 
-
-      </React.Fragment>
-      </div>
 
     );
   }

@@ -7,6 +7,8 @@ import Story from './story';
 import Shop from './shop';
 import { Switch, Route, Redirect } from 'react-router-dom';
 
+
+
 class Main extends Component {
 render() {
 
