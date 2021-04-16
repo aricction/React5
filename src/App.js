@@ -6,6 +6,7 @@ import Main from './pages/main';
 
 function App() {
   return(
+
     <BrowserRouter>
       <div>
        <Main />

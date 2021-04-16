@@ -17,7 +17,11 @@ render() {
   }
   return(
     <div>
-    <Header />
+    <Header auth={this.props.auth}
+    loginUser={this.props.loginUser}
+    logoutUser={this.props.logoutUser}
+
+     />
 
      <Switch>
       <Route path="/home" component={HomePage} />

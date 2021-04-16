@@ -1,15 +1,17 @@
 import React, { Component } from 'react';
-import { Navbar ,NavbarBrand , Nav,Collapse ,NavItem, NavbarToggler } from 'reactstrap';
+import { Navbar ,NavbarBrand ,Nav ,Collapse ,NavItem, NavbarToggler,
+Button, Modal, ModalHeader, ModalBody, Form, FormGroup, Input, Label } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
 
 class Header extends Component {
 
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = {
       isNavOpen: false
     };
     this.toggleNav = this.toggleNav.bind(this);
+    this.toggleModal = this.toggleModal.bind(this);
   }
 
   toggleNav(){
@@ -17,9 +19,25 @@ class Header extends Component {
       isNavOpen: !this.state.isNavOpen
     });
   }
+
+  toggleModal() {
+    this.setState({
+        isModalOpen: !this.state.isModalOpen
+    });
+  }
+
+  handleLogin(event) {
+      this.toggleModal();
+      this.props.loginUser({username: this.username.value, password: this.password.value});
+      event.preventDefault();
+
+  }
+
+  handleLogout() {
+      this.props.logoutUser();
+  }
+
   render(){
-
-
     return(
       <div className="Header">
       <React.Fragment>
@@ -66,9 +84,60 @@ class Header extends Component {
 
 
                   </Nav>
+                  <Nav className="ml-auto" navbar>
+                      <NavItem>
+
+                              <Button>
+                                  <span className="fa fa-sign-in fa-lg"></span> Login
+
+                                      <span className="fa fa-spinner fa-pulse fa-fw"></span>
+                                      : null
+
+                              </Button>
+                              :
+                              <div>
+                              <div className="navbar-text mr-3"></div>
+                              <Button >
+                                  <span className="fa fa-sign-out fa-lg"></span> Logout
+                                
+                                      <span className="fa fa-spinner fa-pulse fa-fw"></span>
+                                      : null
+
+                              </Button>
+                              </div>
+
+
+                      </NavItem>
+                  </Nav>
       </Collapse>
       </div>
       </Navbar>
+
+       <Modal>
+         <ModalHeader>Login</ModalHeader>
+         <ModalBody>
+             <Form>
+                <FormGroup>
+                   <Label Htmlfor="username">Username</Label>
+                   <Input type="text" id="username" name="username" />
+
+                </FormGroup>
+                <FormGroup>
+                   <Label Htmlfor="password">Password</Label>
+                   <Input type="Password" id="password" name="password" />
+
+                </FormGroup>
+                <FormGroup>
+                <Label check>
+                   <Input type="checkbox" name="remember" />
+                   Remember me
+
+                </Label>
+                </FormGroup>
+                <Button type="submit" value="submit" color="primary">Login</Button>
+             </Form>
+         </ModalBody>
+       </Modal>
 
 
       </React.Fragment>
