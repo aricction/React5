@@ -5,11 +5,15 @@ import Header from './HeaderComponent';
 import Menu from './menu';
 import Story from './story';
 import Shop from './shop';
+import Cart from '../component/Cart'
 import { Switch, Route, Redirect } from 'react-router-dom';
 
 
 
+
 class Main extends Component {
+
+
 render() {
 
   const HomePage = () =>{
@@ -19,18 +23,20 @@ render() {
   }
   return(
     <div>
+
     <Header auth={this.props.auth}
     loginUser={this.props.loginUser}
-    logoutUser={this.props.logoutUser}
+    logoutUser={this.props.logoutUser}/>
 
-     />
+
 
      <Switch>
       <Route path="/home" component={HomePage} />
       <Route path="/story" component={Story} />
       <Route path="/contact" component={Contact} />
-      <Route path="/menu" component={Menu} />
+      <Route path="/menu" component={() => <Menu dishes={this.props.dishes} />} />
       <Route path="/shop" component={Shop} />
+      <Route path="/cart" component={Cart} />
       <Redirect to="/home" />
      </Switch>
     </div>

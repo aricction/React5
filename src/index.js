@@ -4,12 +4,18 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'font-awesome/css/font-awesome.min.css';
 import 'bootstrap-social/bootstrap-social.css';
 import './index.css';
+import cartReducer from './component/reducers/cartReducer';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+const store = createStore(cartReducer);
 ReactDOM.render(
   <React.StrictMode>
+  <Provider store={store}>
     <App />
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );

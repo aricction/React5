@@ -99,3 +99,18 @@
   font-family: gotham;
 
 }
+.card{
+width:400px;
+}
+.card-title{
+
+}
+.card-image{
+  position:;
+
+}
+.box{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}

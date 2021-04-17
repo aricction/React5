@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "name": "Uthappizza",
+    "image":"assets/images/uthappizza.png",
+    "price":4.99
+  },
+  {
+    "id": 2,
+    "name": "Buckky"
+  },
+  {
+    "id": 3,
+    "name": "Nyra"
+  }
+]
