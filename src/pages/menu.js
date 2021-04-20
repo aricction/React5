@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Header from './HeaderComponent';
 import { Breadcrumb, BreadcrumbItem, Media } from 'reactstrap';
 import { Link } from 'react-router-dom';
+import Footer from '../component/footer';
 class Menu extends Component{
 
   constructor(props){
@@ -88,7 +89,7 @@ class Menu extends Component{
            {menu}
            </Media>
            </div>
-
+<Footer />
            </div>
 
 

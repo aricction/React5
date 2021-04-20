@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-import { Link } from 'react-router-dom';
+import { Link , NavLink} from 'react-router-dom';
 import Header from './HeaderComponent';
-
+import {Button} from 'reactstrap';
 class Home extends Component {
 
   constructor(props){
@@ -134,9 +134,56 @@ class Home extends Component {
 
       </div>
   </div>
+  <div className="container">
+  <div className="row">
+  <div className=" img-fluid">
+<img src="assets/img/A1.jpg" />
+ </div>
 
+ <div className="col">
+ <h3>About us</h3>
+ <h2 className="col-9">Simple Way of Eating Delicious</h2>
+ <p className="col-sm">Keep healthy readily available.When you get hungry,
+  your're likely to eat the first thing you see on the counter or in the</p>
+<Button color="primary" type="submit"><span><NavLink className="nav-link text-white"to="/story">Explore our story</NavLink></span></Button>
 
+ </div>
+</div>
+</div>
 
+<div className="container">
+<div className="row justify-content-md-center">
+<div class="col-md-auto ">
+<h4 className="features">Features</h4>
+</div>
+</div>
+<div className="row justify-content-md-center">
+    <div className="col-md-auto">
+<h2>Our Awesome Services</h2>
+</div>
+</div>
+</div>
+
+<div class="container">
+  <div class="row ">
+   <div class="col-1">
+   </div>
+
+    <div class="col-sm points">
+      <h4>Quality Food</h4>
+      <h7 className="">Keep healthy food readily available. When you get hungry, you're more likely to</h7>
+    </div>
+    <div class="col-sm points ">
+        <h4>Super taste</h4>
+        <p>Keep healty food readily available. When you get hungry, you're more likely to</p>
+    </div>
+    <div class="col-sm points">
+    <h4>Faster Delivery</h4>
+      <p>Keep healty food readily available. When you get hungry, you're more likely to</p>
+    </div>
+
+      </div>
+</div>
 
     <footer class="footer">
       <div class="container">

@@ -36,8 +36,20 @@
     color:#0d1010;
 
 }
-    .footer{
+.bi-arrow-up-circle-fill {
+  font-size: 2.4em;
+  cursor: pointer;
 
+}
+.bi-arrow-down-circle-fill{
+  margin-left: 10px;
+  font-size: 2.4em;
+  cursor: pointer;
+}
+
+    .footer{
+      margin-top: 10px;
+        width:100;
         background-color: #ced6e0;
         padding: 20px 0px 20px 0px;
     }
@@ -82,6 +94,17 @@
           }
 
       }
+      .img-fluid img{
+        width: 100%;
+      }
+      .home-img img{
+
+
+      }
+
+      .features{
+        margin-top: 140px;
+      }
       .modal-body{
           background:#fffdfd;
       }
@@ -105,12 +128,22 @@ width:400px;
 .card-title{
 
 }
-.card-image{
-  position:;
 
+.points {
+  margin-top: 50px;
 }
 .box{
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+}
+.checkout{
+margin-top: 10px;
+}
+
+.circle{
+
+  width: 75px;
+  border-radius: 50px;
+  box-shadow: 5px 10px 20px #888888;
 }

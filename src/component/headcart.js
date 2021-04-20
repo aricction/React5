@@ -1,19 +1,33 @@
 import React, { Component } from 'react';
-import { Button , Nav, Navbar , NavItem} from 'reactstrap';
+import { Button , Navbar,NavItem, NavLink , Nav} from 'reactstrap';
 import { Link } from 'react-router-dom';
 
 class Headercart extends Component {
   render(){
   return (
-    <nav className="nav-wrapper">
+    <Navbar expand>
+
                   <div className="container">
-                      <ul className="right">
-                          <li><Link to="/">Shop</Link></li>
-                          <li><Link to="/cart">My cart</Link></li>
-                          <li><Link to="/cart"><i className="bi bi-cart">shopping_cart</i></Link></li>
-                      </ul>
+                  <div class="row row-header">
+                        <NavItem className="nav-link">
+
+                          <span><Link to="/">Shop</Link></span>
+                         </NavItem>
+                         <NavItem className="nav-link">
+                          <span><Link to="/cart">My cart</Link></span>
+                           </NavItem>
+
                   </div>
-              </nav>
+                  </div>
+                  <div class=" circle">
+                <NavItem className="nav-link">
+               <span><Link to="/cart"><i className="bi bi-cart text-success"></i></Link></span>
+                     </NavItem>
+                     </div>
+              </Navbar>
+
+
+
   );
   }
 }
