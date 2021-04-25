@@ -2,7 +2,32 @@ import React, {Component} from 'react';
 import { Link , NavLink} from 'react-router-dom';
 import Header from './HeaderComponent';
 import {Button} from 'reactstrap';
+import Carousel from 'react-multi-carousel';
+import "react-multi-carousel/lib/styles.css";
+
+const responsive ={
+  superLargeDesktop: {
+    breakpoint : { max: 4000, min:3000},
+    items: 5
+  },
+  desktop: {
+    breakpoint: { max: 3000, min: 1024},
+    items: 3,
+    slidesToSlide: 3
+  },
+  tablet :{
+    breakpoint:{ max: 1024, min: 464},
+    items: 2,
+    slidesToSlide: 2
+  },
+  mobile: {
+    breakpoint :{ max: 464, min: 0},
+    items: 1,
+    slidesToSlide: 1
+  }
+};
 class Home extends Component {
+
 
   constructor(props){
     super(props);
@@ -74,6 +99,7 @@ class Home extends Component {
             <div id="mycarousel" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner" role="listbox">
                     <div class="carousel-item active">
+
                         <img src="assets/img/food.jpg"  width="1200"alt="home"/>
                        <div class="carousel-caption  ">
                           <div class="text2">
@@ -183,6 +209,69 @@ class Home extends Component {
     </div>
 
       </div>
+
+
+</div>
+
+<div className="container" >
+<div className="row justify-content-md-center">
+<div className="col-md-auto">
+<h4 className="recipes">Our Recipes</h4>
+</div>
+
+</div>
+<div className="row justify-content-md-center">
+<div className="col-md-auto">
+<h3>Most popular items</h3>
+</div>
+
+</div>
+
+<Carousel
+swipeable={false}
+draggable={false}
+showDots={true}
+responsive={responsive}
+ssr={true}
+infinite={true}
+autoPlay={this.props.deviceType !== "mobile" ? true : false}
+///autoPlaySpeed={3000}
+keyboardControl={true}
+customTranisition="all .5"
+transitionDuration={500}
+containerClass="carousel-container"
+removeArrowonDeviceType={["tablet", 'mobile']}
+deviceType={this.props.devicetype}
+dotListClass="custom-dot-list-style"
+itemClass="carousel-item-padding-40px"
+>
+<div  className="card text-center">
+<img className="card-img" src="assets/img/chicken2.jpg"  alt="Card image cap" />
+item1
+</div>
+<div  className="card">
+<img className="card-img" src="assets/img/burger.jpg"  alt="Card image cap" />
+item2
+</div>
+
+<div  className="card">
+<img className="card-img" src="assets/img/donut.jpg"  alt="Card image cap" />
+item3
+</div>
+<div  className="card">
+<img className="card-img" src="assets/img/pasta2.jpg"  alt="Card image cap" />
+item4
+</div>
+</Carousel>
+
+<div className="row justify-content-md-center">
+<div className="col-md-auto col-sm-center">
+<Button type="submit" className="recipeButton" color="primary">
+<span > See more Recipe </span></Button>
+</div>
+
+</div>
+
 </div>
 
     <footer class="footer">

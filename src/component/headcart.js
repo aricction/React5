@@ -8,12 +8,12 @@ class Headercart extends Component {
     <Navbar expand>
 
                   <div className="container">
-                  <div class="row row-header">
-                        <NavItem className="nav-link">
+                  <div class="row ">
+                        <NavItem className="nav-link col">
 
                           <span><Link to="/">Shop</Link></span>
                          </NavItem>
-                         <NavItem className="nav-link">
+                         <NavItem className="nav-link col">
                           <span><Link to="/cart">My cart</Link></span>
                            </NavItem>
 
@@ -24,7 +24,7 @@ class Headercart extends Component {
                <span><Link to="/cart"><i className="bi bi-cart text-success"></i></Link></span>
                      </NavItem>
                      </div>
-              </Navbar>
+        </Navbar>
 
 
 

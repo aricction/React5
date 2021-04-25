@@ -24,7 +24,7 @@ class Shop extends Component{
 
         let itemList = this.props.items.map(item=>{
             return(
-              <div className=" ">
+              <div className="box">
 
                 <div className="card" key={item.id}>
                         <div className="card-image">
