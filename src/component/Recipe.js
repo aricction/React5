@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import { Link, NavLink } from 'react-router-dom';
 import { Button } from 'reactstrap';
 //import { addShipping } from './actions/cartActions'
 class Recipe extends Component{
@@ -26,13 +27,13 @@ class Recipe extends Component{
                     <li className="collection-item">
                             <label className="col">
                                 <input type="checkbox" ref="shipping" onChange= {this.handleChecked} />
-                                <span>Shipping(+6$)</span>
+                                <span>Shipping(+6₹)</span>
                             </label>
                         </li>
-                        <li className="collection-item"><b>Total: {this.props.total} $</b></li>
+                        <li className="collection-item"><b>Total: {this.props.total} ₹</b></li>
                     </div>
                     <div className="container checkout">
-                        <Button className="button" type="submit" color="primary"><span>Checkout</span></Button>
+                        <Button  type="submit" color="primary"><span><NavLink className="nav-link text-white" to="/address">Checkout</NavLink></span></Button>
                     </div>
                  </div>
         )

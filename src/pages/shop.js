@@ -37,7 +37,7 @@ class Shop extends Component{
 
                         <div className="card-content ">
                             <p>{item.desc}</p>
-                            <p><b>Price: {item.price}$</b></p>
+                            <p><b>Price: {item.price} ₹</b></p>
 
                         </div>
                         <Button className="button1" type="submit" color="success">
@@ -63,24 +63,20 @@ class Shop extends Component{
                    <h1> ORDER ONLINE </h1>
                </div>
                 <hr/>
-           </div>
+          </div>
 
            <div className="container">
           <Headercart />
-
           </div>
 
 
           <div className="box">
           {itemList}
-
           </div>
 
-      </div>
-      < Footer />
-
-
-</div>
+       </div>
+       <Footer />
+ </div>
 
 
 
@@ -100,4 +96,4 @@ const mapDispatchToProps= (dispatch)=>{
         addToCart: (id)=>{dispatch(addToCart(id))}
     }
 }
-export default connect(mapStateToProps,mapDispatchToProps)(Shop)
+export default connect(mapStateToProps,mapDispatchToProps)(Shop);

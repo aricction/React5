@@ -246,20 +246,20 @@ dotListClass="custom-dot-list-style"
 itemClass="carousel-item-padding-40px"
 >
 <div  className="card text-center">
-<img className="card-img" src="assets/img/chicken2.jpg"  alt="Card image cap" />
+<img className="card-img" src="assets/img/chicken2.jpg"  alt="Card cap" />
 item1
 </div>
 <div  className="card">
-<img className="card-img" src="assets/img/burger.jpg"  alt="Card image cap" />
+<img className="card-img" src="assets/img/burger.jpg"  alt="Card  cap" />
 item2
 </div>
 
 <div  className="card">
-<img className="card-img" src="assets/img/donut.jpg"  alt="Card image cap" />
+<img className="card-img" src="assets/img/donut.jpg"  alt="Card cap" />
 item3
 </div>
 <div  className="card">
-<img className="card-img" src="assets/img/pasta2.jpg"  alt="Card image cap" />
+<img className="card-img" src="assets/img/pasta2.jpg"  alt="Card cap" />
 item4
 </div>
 </Carousel>
@@ -303,7 +303,7 @@ item4
       </div>
   <div class="row justify-content-center">
       <div class="col-auto">
-          <p>© Copyright 2018 Gourmet Food</p>
+          <p>© Copyright 2018 Gourmet Food & more</p>
       </div>
   </div>
   </div>

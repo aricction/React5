@@ -46,10 +46,9 @@
   font-size: 2.4em;
   cursor: pointer;
 }
+.footer{
 
-    .footer{
-      margin-top: 10px;
-        width:100;
+        margin-top: 10px;
         background-color: #ced6e0;
         padding: 20px 0px 20px 0px;
     }
@@ -82,7 +81,7 @@
       }
 
       .nav-item{
-      margin-right: 50px;
+      margin-right: 20px;
       margin-left: inherit;
       }
       .modal-header{
@@ -155,7 +154,9 @@ margin-top: 10px;
   padding-top: 20px;
   margin-top: 50px;
 }
-
+.radio1{
+  margin-top:20px;
+}
 .card .recipeCard {
 
     width: 300px;

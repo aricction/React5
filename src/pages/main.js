@@ -5,7 +5,7 @@ import Header from './HeaderComponent';
 import Menu from './menu';
 import Story from './story';
 import Shop from './shop';
-
+import Address from '../component/checkout/address';
 import Cart from '../component/Cart'
 import Footer from'../component/footer';
 import { Switch, Route, Redirect } from 'react-router-dom';
@@ -39,6 +39,7 @@ render() {
       <Route path="/menu" component={() => <Menu dishes={this.props.dishes} />} />
       <Route path="/shop" component={Shop} />
       <Route path="/cart" component={Cart} />
+      <Route path="/address" component={Address} />
       <Redirect to="/home" />
      </Switch>
     </div>

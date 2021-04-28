@@ -44,7 +44,7 @@ class Cart extends Component{
                                         </div>
                                         </div>
                                         </div>
-                                        <p><b>Price: {item.price}$</b></p>
+                                        <p><b>Price: {item.price}₹</b></p>
                                         <p>
                                             <b>Quantity: {item.quantity}</b>
                                         </p>
@@ -89,7 +89,7 @@ class Cart extends Component{
 
 
 
-            
+
 
 
 
