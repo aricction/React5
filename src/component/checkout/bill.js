@@ -53,11 +53,13 @@ export default function Payment() {
 
         />
       </div>
+    
+
 <hr/>
 <div className='radio1'>
       <FormGroup check>
       <Label check>
-      <Input type="radio" name="radio1" />{'  '}
+      <Input type="radio" value ="uncheck" name="radio1" />{'  '}
       Cash on Delivery
       </Label>
       </FormGroup>

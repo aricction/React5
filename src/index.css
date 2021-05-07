@@ -35,7 +35,7 @@ font-weight: bold;
 .card-content{
 
   margin: 10px;
-  border: solid 1px red;
+
 
 
 }
@@ -45,13 +45,13 @@ font-weight: bold;
   margin-top: -50px;
   margin-right: 20px;
   margin-left: 135px;
-  border: solid 1px red;
+
 }
 
 
 .card-image{
 
-border: solid red 5px;
+
 margin-left: 60px;
 display:contents;
 
@@ -63,7 +63,7 @@ display:contents;
 
 }
 .collection {
-
+ background-color:white;
   margin-top: 10px;
 box-shadow: 5px 10px 18px #888888;
   width:100%;
@@ -71,16 +71,16 @@ box-shadow: 5px 10px 18px #888888;
 }
 
 .collection-item{
-    display: inline;
+    display:  inline-flex;
 
     margin:20px;
 
 }
 .collection-item.avatar .title {
-    font-size: 20px;
+    font-size: 30px;
     font-weight: 500;
     font-family: gotham;
-    color: red;
+
     display: block;
     margin-bottom: 20px;
 }
@@ -91,4 +91,7 @@ box-shadow: 5px 10px 18px #888888;
 }
 .item-desc{
 
+}
+.rating{
+  color: yellow;
 }

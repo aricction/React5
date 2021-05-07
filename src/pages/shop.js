@@ -29,7 +29,7 @@ class Shop extends Component{
                 <div className="card" key={item.id}>
                         <div className="card-image">
 
-                          <img src={item.img} alt={item.title}/>
+                          <img className="img-div" src={item.img} alt={item.title}/>
                         </div>
 
                               <span className="card-title container">{item.title}</span>
@@ -38,6 +38,7 @@ class Shop extends Component{
                         <div className="card-content ">
                             <p>{item.desc}</p>
                             <p><b>Price: {item.price} ₹</b></p>
+                          
 
                         </div>
                         <Button className="button1" type="submit" color="success">
@@ -49,7 +50,7 @@ class Shop extends Component{
             );
         })
     return (
-
+<div className="home">
 <div className="container">
 
      <div className="row">
@@ -71,15 +72,16 @@ class Shop extends Component{
 
 
           <div className="box">
+
           {itemList}
           </div>
 
        </div>
-       <Footer />
+
  </div>
 
-
-
+       <Footer />
+</div>
 
    );
   }

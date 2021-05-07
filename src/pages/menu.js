@@ -72,7 +72,7 @@ class Menu extends Component{
     });
 
     return (
-
+<div className="home">
       <div className="container">
          <div className="row">
            <Breadcrumb>
@@ -89,9 +89,10 @@ class Menu extends Component{
            {menu}
            </Media>
            </div>
-<Footer />
-           </div>
 
+           </div>
+           <Footer />
+</div>
 
 
 

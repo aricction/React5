@@ -21,7 +21,7 @@ class Headercart extends Component {
                   </div>
                   <div class=" circle">
                 <NavItem className="nav-link">
-               <span><Link to="/cart"><i className="bi bi-cart text-success"></i></Link></span>
+               <span><Link to="/cart"><i className="bi bi-cart text-primary"></i></Link></span>
                      </NavItem>
                      </div>
         </Navbar>

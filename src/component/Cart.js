@@ -29,20 +29,24 @@ class Cart extends Component{
                 this.props.items.map(item=>{
                     return(
 
-                        <span className="collection-item avatar" key={item.id}>
+                        <div className="container collection-item avatar" key={item.id}>
+                        <div className="row ">
                                     <div className="item-img">
                                         <img src={item.img} alt={item.img} className=""/>
-                                    </div>
+                                </div>
 
-                                    <div className="item-desc">
 
-                                        <span className="title">{item.title}</span>
-                                        <div class="container">
-                                        <div class="row">
-                                        <div class="">
-                                        <p>{item.desc}</p>
-                                        </div>
-                                        </div>
+                                    <div className="col">
+
+                                        <span className="title ">{item.title}</span>
+                                        <div class="d-none d-sm-block">
+                                          <p >{item.desc}</p>
+                                            </div>
+                                        <div class="col-sm">
+
+
+
+
                                         </div>
                                         <p><b>Price: {item.price}₹</b></p>
                                         <p>
@@ -59,21 +63,22 @@ class Cart extends Component{
                                         </div>
                                         </div>
                                         </div>
-                                        <Button className=""  onClick={()=>{this.handleRemove(item.id)}}>Remove</Button>
+                                        <Button className="button" color="warning" onClick={()=>{this.handleRemove(item.id)}}>Remove</Button>
                                     </div>
-
-                               </span>
+                                 </div>
+                               </div>
                     )
                 })
             ):
 
              (
-                <p>Nothing.</p>
+                <p><h4>Cart is Empty.</h4></p>
              )
        return(
+         <div className="home">
           <div className="container">
             <Headercart />
-          <div className="col">
+            <div className="col">
 
                 <div className="cart">
                     <h5>You have ordered:</h5>
@@ -82,18 +87,17 @@ class Cart extends Component{
                     </ul>
                   <Recipe />
                  </div>
-                 </div>
-
-                 <Footer />
-                 </div>
-
-
+               </div>
+             </div>
+            <Footer />
+         </div>
 
 
 
 
 
-       );
+
+       )
     }
 }
 

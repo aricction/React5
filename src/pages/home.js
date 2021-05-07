@@ -4,7 +4,7 @@ import Header from './HeaderComponent';
 import {Button} from 'reactstrap';
 import Carousel from 'react-multi-carousel';
 import "react-multi-carousel/lib/styles.css";
-
+import Book from './bookTable';
 const responsive ={
   superLargeDesktop: {
     breakpoint : { max: 4000, min:3000},
@@ -45,7 +45,7 @@ class Home extends Component {
 
   render(){
     return (
-      <div className="Home">
+      <div className="home">
 
 
 
@@ -58,6 +58,7 @@ class Home extends Component {
                       &times;
                   </button>
               </div>
+
               <div class="modal-body">
                   <form>
                       <div class="form-row">
@@ -91,7 +92,7 @@ class Home extends Component {
   </div>
 
 
-  <header >
+  <header  >
 
     <div class="container">
         <div class="col">
@@ -156,9 +157,11 @@ class Home extends Component {
               laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
               voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
                non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+               <Book />
           </div>
 
       </div>
+
   </div>
   <div className="container">
   <div className="row">
@@ -246,21 +249,42 @@ dotListClass="custom-dot-list-style"
 itemClass="carousel-item-padding-40px"
 >
 <div  className="card text-center">
-<img className="card-img" src="assets/img/chicken2.jpg"  alt="Card cap" />
-item1
+<img className="img-div" src="assets/img/chicken2.jpg"  alt="Card cap" />
+<div className="rating">
+<i className="fa fa-star " aria-hidden="true"></i>
+<i className="fa fa-star "></i>
+<i className="fa fa-star "></i>
+<i className="fa fa-star-half-o "></i>
 </div>
-<div  className="card">
-<img className="card-img" src="assets/img/burger.jpg"  alt="Card  cap" />
-item2
+</div>
+<div  className="card  text-center">
+<img className="img-div" src="assets/img/burger.jpg"  alt="Card  cap" />
+<div className="rating">
+<i className="fa fa-star " aria-hidden="true"></i>
+<i className="fa fa-star "></i>
+<i className="fa fa-star-half-o "></i>
+</div>
 </div>
 
-<div  className="card">
-<img className="card-img" src="assets/img/donut.jpg"  alt="Card cap" />
-item3
+<div  className="card  text-center">
+<img className="img-div" src="assets/img/donut.jpg"  alt="Card cap" />
+<div className="rating">
+<i className="fa fa-star " aria-hidden="true"></i>
+<i className="fa fa-star "></i>
+<i className="fa fa-star "></i>
+<i className="fa fa-star "></i>
+<i className="fa fa-star-half-o "></i>
 </div>
-<div  className="card">
-<img className="card-img" src="assets/img/pasta2.jpg"  alt="Card cap" />
-item4
+</div>
+<div  className="card  text-center">
+<img className="img-div" src="assets/img/burger2.jpg"  alt="Card cap" />
+<div className="rating">
+<i className="fa fa-star " aria-hidden="true"></i>
+<i className="fa fa-star "></i>
+<i className="fa fa-star "></i>
+<i className="fa fa-star "></i>
+<i className="fa fa-star "></i>
+</div>
 </div>
 </Carousel>
 
@@ -303,7 +327,7 @@ item4
       </div>
   <div class="row justify-content-center">
       <div class="col-auto">
-          <p>© Copyright 2018 Gourmet Food & more</p>
+          <p>© Copyright 2021 Gourmet Food & more</p>
       </div>
   </div>
   </div>

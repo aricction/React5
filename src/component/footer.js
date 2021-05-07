@@ -8,19 +8,14 @@ render(){
       <div class="container">
       <div class="row">
           <div class="col-4 offset-1 col-sm-2">
-              <h5>Links</h5>
-                <ul class="list-unstyled">
-                    <li><Link to="/home">Home</Link></li>
-                    <li><Link to="/story">Our story</Link></li>
-                    <li><Link to="/menu">Resturant</Link></li>
-                    <li><Link to="/contact">Contact</Link></li>
-                </ul>
-          </div>
-          <div class="col-7 col-sm">
-              <h5>Our Address</h5>
 
           </div>
-          <div class="col-12 col-sm align-self-center">
+          <div class="col-7 col-sm">
+
+
+          </div>
+          <div className="container">
+          <div className="row justify-content-center">
               <div class="text-center">
                   <a href="http://google.com/+"><i class="fa fa-google-plus"></i></a>
                   <a href="http://www.facebook.com/profile.php?id="><i class="bi bi-facebook"></i></a>
@@ -31,10 +26,13 @@ render(){
               </div>
           </div>
       </div>
+            <div className="container">
   <div class="row justify-content-center">
       <div class="col-auto">
-          <p>© Copyright 2018 Gourmet Food & more</p>
+          <p>© Copyright 2021 Gourmet Food & more</p>
       </div>
+      </div>
+  </div>
   </div>
   </div>
     </footer>

@@ -1,20 +1,20 @@
-import Uthappizza from '../../images/uthappizza.png'
-import Vadonut from '../../images/vadonut.png'
-import Zucchipakoda from '../../images/zucchipakoda.png'
-import Elaicheesecake from '../../images/elaicheesecake.png'
-import Buffet from '../../images/buffet.png'
+import Uthappizza from '../../images/samosa.jpg'
+import Vadonut from '../../images/donut2.jpg'
+import Zucchipakoda from '../../images/noodles5.png'
+import Elaicheesecake from '../../images/chicken4.jpg'
+import Pasta from '../../images/pasta3.png'
 import Burger from '../../images/1.png'
 import { ADD_TO_CART, REMOVE_ITEM,ADD_QUANTITY,SUB_QUANTITY , ADD_SHIPPING} from '../actions/action-types/cart-actions'
 
 
 const initState = {
   items : [
-    {id:1, title: 'starters', desc:  "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex. ", price:4.99, img:Uthappizza},
-    {id:2, title: 'main', desc:  "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex. ", price:3.40, img:Vadonut},
-    {id:3, title: 'starters', desc:  "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex. ", price:4.99, img:Zucchipakoda},
-    {id:4, title: 'main', desc:  "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex. ", price:3.40, img:Elaicheesecake},
-    {id:5, title: 'starters', desc:  "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex. ", price:4.99, img:Buffet},
-    {id:6, title: 'Burger', desc:  "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex. ", price:3.40, img:Burger}
+    {id:1, title: 'Samosa', desc:  "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex. ", price:7.00, img:Uthappizza},
+    {id:2, title: 'Chocolate Donut', desc:  "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex. ", price:80, img:Vadonut},
+    {id:3, title: 'Hakka Noodles', desc:  "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex. ", price:110, img:Zucchipakoda},
+    {id:4, title: 'Butter Chicken', desc:  "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex. ", price:100, img:Elaicheesecake},
+    {id:5, title: 'Red Sauce Pasta', desc:  "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex. ", price:90, img:Pasta},
+    {id:6, title: 'Burger', desc:  "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex. ", price:50.44, img:Burger}
   ],
   addedItems:[],
   total: 0

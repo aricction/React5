@@ -28,6 +28,7 @@ class Header extends Component {
     });
   }
 
+
   handleLogin(event) {
       this.toggleModal();
       alert("Username: " + this.username.value + " Password: " + this.password.value
@@ -76,7 +77,7 @@ class Header extends Component {
                      </NavItem>
 
                      <NavItem>
-                     <NavLink className="nav-link " to="./contact">
+                     <NavLink className="nav-link  text-dark" to="./contact">
                         <span className="bi bi-person-lines-fill"></span> Contact
                       </NavLink>
                      </NavItem>
@@ -98,7 +99,8 @@ class Header extends Component {
       </Navbar>
 
        <Modal isOpen={this.state.isModalOpen} toggle={this.toggleModal}>
-         <ModalHeader>Login</ModalHeader>
+         <ModalHeader>Login </ModalHeader>
+
           <ModalBody>
              <Form onSubmit={this.handleLogin}>
                 <FormGroup>

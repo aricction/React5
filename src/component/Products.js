@@ -11,11 +11,15 @@ import formatCurrency from "../util";
             <li key={product._id}>
               <div className="product">
                 <a href={"#" + product._id}>
+                <div className="img-div">
                   <img src={product.image} alt={product.name}></img>
+                  </div>
                   <p>{product.name}</p>
                 </a>
                 <div className="product-price">
                   <div>{formatCurrency(product.price)}</div>
+
+
                   <button className="button primary">Add To cart</button>
                 </div>
               </div>

@@ -1,21 +1,42 @@
 import React, { Component} from 'react';
-import { Form , FormGroup, Label, Input , Row, Col,Breadcrumb, BreadcrumbItem } from 'reactstrap';
-import { Link } from 'react-router-dom';
+import {Button, Form , FormGroup, Label, Input ,
+   Modal, ModalHeader, ModalBody, ModalFooter,
+    Row, Col,Breadcrumb, BreadcrumbItem } from 'reactstrap';
+import { Link , NavLink } from 'react-router-dom';
 import Footer from '../footer';
 import Payment from './bill';
+import OrderSummary from './orderSummary';
+
 class Address extends Component {
 
+constructor(props){
+  super(props);
+
+  this.state= {
+    isModalOpen: false
+  };
+  this.toggleModal = this.toggleModal.bind(this);
+}
+toggleModal(){
+  this.setState({
+    isModalOpen: !this.state.isModalOpen
+  });
+}
+
   render (){
+
+
     return (
 
-      <div className='container'>
-      <div className='row'>
+      <div className='container '>
+      <div className='row '>
       <Breadcrumb>
       <BreadcrumbItem><Link to='/home'>Home</Link></BreadcrumbItem>
       <BreadcrumbItem><Link to='/shop'>Order Online</Link></BreadcrumbItem>
       <BreadcrumbItem>Checkout</BreadcrumbItem>
       </Breadcrumb>
       </div>
+
         <hr />
         <p ><h3>Shipping address</h3></p>
       <Form>
@@ -76,7 +97,21 @@ class Address extends Component {
  </Row>
 
   </Form>
+
+  <Button className="button" color="primary"><span>Save & deliver here</span></Button>
+  <hr/>
 <Payment />
+<Modal isOpen={this.state.isModalOpen} toggle={this.toggleModal}>
+<ModalHeader>Order Summary</ModalHeader>
+<ModalBody>
+<p>Order placed</p>
+<Button><span>continue shopping</span></Button>
+</ModalBody>
+</Modal>
+<Button onClick={this.toggleModal} color="primary">
+<span>Confirm order</span>
+</Button>
+
       </div>
 
 

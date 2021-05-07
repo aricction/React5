@@ -3,8 +3,6 @@ import './App.css';
 import {BrowserRouter} from 'react-router-dom';
 import Main from './pages/main';
 
-
-
 function App() {
 
   return(

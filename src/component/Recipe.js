@@ -24,16 +24,16 @@ class Recipe extends Component{
         return(
             <div className="container">
                 <div className="collection">
-                    <li className="collection-item">
+                    <span className="">
                             <label className="col">
                                 <input type="checkbox" ref="shipping" onChange= {this.handleChecked} />
                                 <span>Shipping(+6₹)</span>
                             </label>
-                        </li>
+                        </span>
                         <li className="collection-item"><b>Total: {this.props.total} ₹</b></li>
                     </div>
                     <div className="container checkout">
-                        <Button  type="submit" color="primary"><span><NavLink className="nav-link text-white" to="/address">Checkout</NavLink></span></Button>
+                        <Button  type="submit" className="button" color="primary"><span><NavLink className="nav-link text-white" to="/address">Checkout</NavLink></span></Button>
                     </div>
                  </div>
         )

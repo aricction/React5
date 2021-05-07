@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import Header from './HeaderComponent';
-import { Breadcrumb, BreadcrumbItem, Button, Form, FormGroup, Label, Input, Col, Row, FormFeedback } from 'reactstrap';
-import { Link  } from 'react-router-dom';
+import { Breadcrumb, BreadcrumbItem, Button, Form, FormGroup
+  , Label, Input, Col, Row, FormFeedback } from 'reactstrap';
+import {Control, LocalForm, Errors} from 'react-redux-form';
+import { Link ,NavLink } from 'react-router-dom';
 import Footer from '../component/footer';
 
 
@@ -91,7 +93,7 @@ class Contact extends Component {
     return(
 
 
-
+<div className="home">
 <div className="container">
             <div className="row">
                <Breadcrumb>
@@ -234,10 +236,15 @@ class Contact extends Component {
 
 
                </Form>
+               <div className="container">
+            <a href="https://rzp.io/l/1bjRFVyF"><span>Click me</span></a>
+               </div>
                </div>
             </div>
 
 
+</div>
+<Footer />
         </div>
 
     );
