@@ -145,7 +145,7 @@ class Contact extends Component {
                   <Input type="text" id="firstname" name="firstname"
                      placeholder="First Name"
                       value={this.state.firstname}
-
+                       required
                       onBlur={this.handleBlur('firstname')}
                       onChange={this.handleInputChange} />
                      <FormFeedback>
@@ -159,7 +159,7 @@ class Contact extends Component {
                   <Col md={10}>
                   <Input type="text" id="lastname" name="lastname"
                      placeholder="Last Name" value={this.state.lastname}
-
+                        required
                        onBlur={this.handleBlur('lastname')}
                      onChange={this.handleInputChange} />
                      <FormFeedback>
@@ -173,7 +173,7 @@ class Contact extends Component {
                   <Col md={10}>
                   <Input type="tel" id="telnum" name="telnum"
                      placeholder="Tel. Number" value={this.state.telnum}
-
+                     required
                        onBlur={this.handleBlur('telnum')}
                      onChange={this.handleInputChange} />
                      <FormFeedback>
@@ -187,7 +187,7 @@ class Contact extends Component {
                   <Col md={10}>
                   <Input type="email" id="email" name="email"
                      placeholder="Email" value={this.state.email}
-
+                      required
                        onBlur={this.handleBlur('email')}
                       onChange={this.handleInputChange} />
                      <FormFeedback>
@@ -221,7 +221,9 @@ class Contact extends Component {
                     <FormGroup row>
                     <Label Htmlfor="message" md="{2}"> Your Feedback</Label>
                     <Col md={10}>
-                    <Input type="textarea" id="message" name="message" rows="12"
+                    <Input type="textarea" id="message" name="message"
+                     required
+                    rows="12"
                     value={this.state.message}  onChange={this.handleInputChange}/>
                     </Col>
                     </FormGroup>

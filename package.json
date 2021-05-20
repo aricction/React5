@@ -2,6 +2,7 @@
   "name": "reactweb",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:5000",
   "dependencies": {
     "@babel/core": "^7.13.0",
     "@google-pay/button-react": "^2.3.0",
@@ -11,17 +12,20 @@
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "axios": "0.21.1",
-    "babel-loader": "^8.1.0",
+    "body-parser": "^1.19.0",
     "bootstrap": "^4.0.0",
     "bootstrap-icons": "^1.4.1",
     "bootstrap-social": "^5.1.1",
+    "config": "^3.3.6",
+    "express": "^4.17.1",
     "font-awesome": "^4.7.0",
     "jquery": "^3.1.1",
+    "mongoose": "^5.12.9",
+    "nodemon": "^2.0.7",
     "popper.js": "^1.12.9",
     "prop-types": "^15.7.2",
     "razorpay": "^2.0.6",
     "react": "^17.0.2",
-    "react-custom-scrollbars": "^4.2.1",
     "react-datepicker": "^3.8.0",
     "react-dom": "^17.0.2",
     "react-multi-carousel": "^2.6.2",
@@ -29,7 +33,7 @@
     "react-redux": "5.0.7",
     "react-redux-form": "^1.16.14",
     "react-router-dom": "^4.2.2",
-    "react-scripts": "4.0.3",
+    "react-scripts": "^2.1.8",
     "react-slideshow-image": "^3.4.6",
     "react-stripe-checkout": "^2.6.3",
     "react-transition-group": "^1.1.2",
@@ -66,5 +70,17 @@
   },
   "devDependencies": {
     "json-loader": "^0.5.7"
-  }
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aricction/Reactweb2.git"
+  },
+  "author": "govind",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aricction/Reactweb2/issues"
+  },
+  "homepage": "https://github.com/aricction/Reactweb2#readme"
 }
