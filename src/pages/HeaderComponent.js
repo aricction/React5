@@ -81,11 +81,22 @@ class Header extends Component {
                         <span className="bi bi-person-lines-fill"></span> Contact
                       </NavLink>
                      </NavItem>
-
+                     <NavItem>
+                     <NavLink className="nav-link  text-dark" to="./register">
+                        <span className=""></span> Register
+                      </NavLink>
+                     </NavItem>
+                     <NavItem>
+                     <NavLink className="nav-link  text-dark" to="./login">
+                        <span className=""></span> Login
+                      </NavLink>
+                     </NavItem>
 
 
 
                   </Nav>
+
+                  
                   <Nav className="ml-auto" navbar>
                       <NavItem>
 
@@ -102,28 +113,8 @@ class Header extends Component {
          <ModalHeader>Login </ModalHeader>
 
           <ModalBody>
-             <Form onSubmit={this.handleLogin}>
-                <FormGroup>
-                   <Label Htmlfor="username">Username</Label>
-                   <Input type="text" id="username" name="username"
-                   innerRef={(input) => this.username = input} />
+         
 
-                </FormGroup>
-                <FormGroup>
-                   <Label Htmlfor="password">Password</Label>
-                   <Input type="Password" id="password" name="password"
-                   innerRef={(input) => this.password = input} />
-
-                </FormGroup>
-                <FormGroup check>
-                <Label check>
-                   <Input type="checkbox" name="remember"
-                      innerRef={(input) => this.remember = input } />
-                      Remember me
-                </Label>
-                </FormGroup>
-                <Button type="submit" value="submit" color="primary">Login</Button>
-             </Form>
          </ModalBody>
        </Modal>
     </React.Fragment>

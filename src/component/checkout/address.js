@@ -31,8 +31,8 @@ toggleModal(){
       <div className='container '>
       <div className='row '>
       <Breadcrumb>
-      <BreadcrumbItem><Link to='/home'>Home</Link></BreadcrumbItem>
-      <BreadcrumbItem><Link to='/shop'>Order Online</Link></BreadcrumbItem>
+      <BreadcrumbItem><Link to='/home'  style={{ color: '#00b894' }}>Home</Link></BreadcrumbItem>
+      <BreadcrumbItem><Link to='/shop'  style={{ color: '#e17055' }}>Order Online</Link></BreadcrumbItem>
       <BreadcrumbItem>Checkout</BreadcrumbItem>
       </Breadcrumb>
       </div>

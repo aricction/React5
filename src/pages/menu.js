@@ -62,6 +62,7 @@ class Menu extends Component{
             </Media>
             <Media body className="ml-5">
             <Media heading>{dish.name}</Media>
+            
             <p>{dish.description}</p>
             </Media>
         </Media>
@@ -75,8 +76,8 @@ class Menu extends Component{
 <div className="home">
       <div className="container">
          <div className="row">
-           <Breadcrumb>
-             <BreadcrumbItem><Link to='/home'>Home</Link></BreadcrumbItem>
+           <Breadcrumb> 
+             <BreadcrumbItem><Link to='/home' style={{ color: '#9c88ff' }}>Home</Link></BreadcrumbItem>
              <BreadcrumbItem active> Menu </BreadcrumbItem>
            </Breadcrumb>
           < div className="col-12">

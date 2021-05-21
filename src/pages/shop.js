@@ -37,6 +37,7 @@ class Shop extends Component{
 
                         <div className="card-content ">
                             <p>{item.desc}</p>
+                            <p>{item.label}</p>
                             <p><b>Price: {item.price} ₹</b></p>
                           
 
@@ -55,7 +56,7 @@ class Shop extends Component{
 
      <div className="row">
            <Breadcrumb>
-             <BreadcrumbItem><Link to='/home'>Home</Link></BreadcrumbItem>
+             <BreadcrumbItem><Link to='/home'  style={{ color: '#e84118' }}>Home</Link></BreadcrumbItem>
              <BreadcrumbItem active> Order Online </BreadcrumbItem>
            </Breadcrumb>
 

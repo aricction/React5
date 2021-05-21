@@ -33,7 +33,13 @@ class Recipe extends Component{
                         <li className="collection-item"><b>Total: {this.props.total} ₹</b></li>
                     </div>
                     <div className="container checkout">
-                        <Button  type="submit" className="button" color="primary"><span><NavLink className="nav-link text-white" to="/address">Checkout</NavLink></span></Button>
+                        <Button  type="submit" color="primary">
+                            <span>
+                                <NavLink className="nav-link text-white" to="/address">
+                                    Checkout
+                                </NavLink>
+                            </span>
+                        </Button>
                     </div>
                  </div>
         )

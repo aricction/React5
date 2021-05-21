@@ -17,12 +17,12 @@ render(){
           <div className="container">
           <div className="row justify-content-center">
               <div class="text-center">
-                  <a href="http://google.com/+"><i class="fa fa-google-plus"></i></a>
-                  <a href="http://www.facebook.com/profile.php?id="><i class="bi bi-facebook"></i></a>
-                  <a href="http://www.linkedin.com/in/"><i class="bi bi-linkedin"></i></a>
-                  <a href="http://twitter.com/"><i class="bi bi-twitter"></i></a>
-                  <a href="http://youtube.com/"><i class="bi bi-youtube"></i></a>
-                  <a href="mailto:"><i class="bi bi-envelope-open"></i></a>
+                  <a href="http://google.com/+"  style={{ color: '#e74c3c' }}><i class="fa fa-google-plus"></i></a>
+                  <a href="http://www.facebook.com/profile.php?id="><i class="bi bi-facebook" style={{marginLeft: '5px'}}></i></a>
+                  <a href="http://www.linkedin.com/in/" style={{ color: '#2980b9' }}><i class="bi bi-linkedin" style={{marginLeft: '5px'}}></i></a>
+                  <a href="http://twitter.com/"  style={{ color: '#74b9ff' }}><i class="bi bi-twitter" style={{marginLeft: '5px'}}></i></a>
+                  <a href="http://youtube.com/"  style={{ color: '#d63031' }}><i class="bi bi-youtube" style={{marginLeft: '5px'}}></i></a>
+                  <a href="mailto:"><i class="bi bi-envelope-open" style={{marginLeft: '5px'}}></i></a>
               </div>
           </div>
       </div>

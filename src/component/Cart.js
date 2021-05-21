@@ -57,8 +57,8 @@ class Cart extends Component{
                                         <div class="">
                                         <div className="add-remove">
 
-                                            <Link to="/cart"><span className="bi bi-arrow-up-circle-fill" onClick={()=>{this.handleAddQuantity(item.id)}}></span></Link>
-                                            <Link to="/cart"><span className="bi bi-arrow-down-circle-fill" onClick={()=>{this.handleSubtractQuantity(item.id)}}></span></Link>
+                                            <Link to="/cart"><span className="bi bi-plus" onClick={()=>{this.handleAddQuantity(item.id)}}></span></Link>
+                                            <Link to="/cart"><span className="bi bi-dash" onClick={()=>{this.handleSubtractQuantity(item.id)}}></span></Link>
                                         </div>
                                         </div>
                                         </div>

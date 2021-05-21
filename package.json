@@ -11,7 +11,7 @@
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
-    "axios": "0.21.1",
+    "axios": "^0.21.1",
     "body-parser": "^1.19.0",
     "bootstrap": "^4.0.0",
     "bootstrap-icons": "^1.4.1",
@@ -42,6 +42,7 @@
     "redirect": "^0.2.0",
     "redux": "3.7.2",
     "stripe": "^8.145.0",
+    "uuid": "^3.4.0",
     "web-vitals": "^1.0.1"
   },
   "scripts": {

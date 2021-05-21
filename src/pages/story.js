@@ -10,7 +10,7 @@ class Story extends Component{
       <div className="container">
          <div className="row">
            <Breadcrumb>
-             <BreadcrumbItem><Link to='/home'>Home</Link></BreadcrumbItem>
+             <BreadcrumbItem><Link to='/home' style={{ color: '#e1b12c' }}>Home</Link></BreadcrumbItem>
              <BreadcrumbItem active> Our Story </BreadcrumbItem>
            </Breadcrumb>
           < div className="col-12">

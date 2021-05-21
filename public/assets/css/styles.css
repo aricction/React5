@@ -36,6 +36,15 @@
     color:#0d1010;
 
 }
+.bi-plus {
+  font-size: 2.4em;
+  cursor: pointer;
+}
+
+.bi-dash{
+  font-size: 2.4em;
+  cursor: pointer;
+}
 .bi-arrow-up-circle-fill {
   font-size: 2.4em;
   cursor: pointer;
@@ -171,4 +180,12 @@ margin-top: 10px;
 }
 .home{
   background-color:#E6FFF7;
+}
+
+.link{
+  color: white;
+}
+.link:hover {
+  text-decoration: none;
+  color: pink;
 }
