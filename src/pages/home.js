@@ -1,10 +1,15 @@
-import React, {Component} from 'react';
+import React, {useContext, useEffect, Component} from 'react';
 import { Link , NavLink} from 'react-router-dom';
 import Header from './HeaderComponent';
 import {Button} from 'reactstrap';
 import Carousel from 'react-multi-carousel';
 import "react-multi-carousel/lib/styles.css";
 import Book from './bookTable';
+
+
+
+
+  
 const responsive ={
   superLargeDesktop: {
     breakpoint : { max: 4000, min:3000},
@@ -26,6 +31,8 @@ const responsive ={
     slidesToSlide: 1
   }
 };
+
+
 class Home extends Component {
 
 

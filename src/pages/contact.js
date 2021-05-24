@@ -1,11 +1,10 @@
-import React, { Component } from 'react';
+import React, { Component , useContext, useEffect} from 'react';
 import Header from './HeaderComponent';
 import { Breadcrumb, BreadcrumbItem, Button, Form, FormGroup
   , Label, Input, Col, Row, FormFeedback } from 'reactstrap';
 import {Control, LocalForm, Errors} from 'react-redux-form';
 import { Link ,NavLink } from 'react-router-dom';
 import Footer from '../component/footer';
-
 
 class Contact extends Component {
 

@@ -1,7 +1,20 @@
-import React, { useState, } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
+import AuthContext from './auth/AuthContext';
 
-const Login = () => {
-    const [user, setuser] = useState({
+const Login = props => {
+
+    const authContext = useContext(AuthContext);
+      
+    const { loginuser, isAuthenticated } = authContext;
+
+    useEffect(() => {
+        if (isAuthenticated){
+            props.history.push("/");
+        }
+    }, [isAuthenticated, props.history]);
+
+
+    const [user, setuser] = useState  ({
         
         email: '',
         password: ''
@@ -11,12 +24,17 @@ const Login = () => {
     const {email, password} = user;
 
     const onChange = e => setuser({
-        ...user, [e.target.name]: e.target.value
+        ...user, 
+        [e.target.name]: e.target.value
     });
 
     const onSubmit = e => {
         e.preventDefault();
-        console.log("log in user ..")
+        loginuser({
+            email,
+            password
+        });
+        
     };
     return (
 
@@ -27,7 +45,7 @@ const Login = () => {
         
           <div className="form-group">
               <label>Enter email</label>
-          <input className='form-control' type='email' name='email'required value={email} onChange={onChange} />
+          <input className='form-control' type='email' name='email' required value={email} onChange={onChange} />
           </div>
           <div className="form-group">
               <label>Enter password</label>
@@ -45,4 +63,4 @@ const Login = () => {
     );
 } 
 
-export default Login
+export default Login;

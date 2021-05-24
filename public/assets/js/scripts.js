@@ -1,3 +1,10 @@
+var itemCount = 0;
+
+$('.add').click(function (){
+  itemCount ++;
+  $('#itemCount').html(itemCount).css('display', 'block');
+}); 
+
 
 $(document).ready(function(){
     $('#loginButton').click(function(){
@@ -14,3 +21,4 @@ $(document).ready(function(){
 $(document).ready(function(){
       $("mycarousel").carousel( { interval: 2000} );
 });
+

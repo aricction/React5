@@ -13,16 +13,18 @@ class Headercart extends Component {
 
                           <span><Link to="/">Shop</Link></span>
                          </NavItem>
-                         <NavItem className="nav-link col">
-                          <span><Link to="/cart" style={{ color: '#9c88ff' }}>My cart</Link></span>
-                           </NavItem>
+                         
 
                   </div>
                   </div>
-                  <div class=" circle">
-                <NavItem className="nav-link">
-               <span><Link to="/cart" ><i className="bi bi-cart text-primary" ></i></Link></span>
-                     </NavItem>
+                  <div class="cart-container ">
+                    <div id='cart'>
+                    <span id='itemCount'></span>
+                    <Link to='/cart'  style={{ color: '#9c88ff' }} > 
+                      <i class='fa fa-shopping-cart fa-2x'></i>
+                      </Link>
+                    </div>
+                   
                      </div>
         </Navbar>
 

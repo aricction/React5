@@ -6,7 +6,7 @@ import Headercart from '../component/headcart';
 import Footer from '../component/footer';
 import { connect } from 'react-redux';
 import { addToCart } from '../component/actions/cartActions';
-
+import $ from 'jquery';
 //import * as data from './data.json';
 //import data from '../local-json/data.json';
 //import Products from '../component/Products';
@@ -14,11 +14,20 @@ import { addToCart } from '../component/actions/cartActions';
 
 class Shop extends Component{
 
+componentDidMount() {
 
+  var itemCount = 0;
+
+$('.add').click(function (){
+  itemCount ++;
+  $('#itemCount').html(itemCount).css('display', 'block');
+}); 
+}
   handleClick = (id) => {
     this.props.addToCart(id);
-    alert("Added to cart successully!");
+    alert("Added to cart successully!" + id);
   }
+  
 
   render() {
 
@@ -43,7 +52,7 @@ class Shop extends Component{
 
                         </div>
                         <Button className="button1" type="submit" color="success">
-                       <span to="/" onClick={()=>{this.handleClick(item.id)}} ><i className="bi bi-bag-plus"> </i>  Add To Cart</span>
+                       <span className="add" to="/" onClick={()=>{this.handleClick(item.id)}} ><i className="bi bi-bag-plus"> </i>  Add To Cart</span>
                            </Button>
 
                  </div>

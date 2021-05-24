@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import Home from './home';
+import Home2 from './home2';
 import Contact from './contact';
+import Navbar from './Navbar';
+import Navbar2 from './Navbar2';
 import Header from './HeaderComponent';
 import Menu from './menu';
 import Story from './story';
@@ -10,7 +13,7 @@ import Cart from '../component/Cart'
 import Footer from'../component/footer';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import RegisterUser from '../component/Register';
-import Login from '../component/Login';
+import LoginUser from '../component/Login';
 import UserAuth from '../component/auth/AuthState';
 import AuthToken from '../component/auth/tokenAuth';
 
@@ -27,16 +30,16 @@ render() {
   const HomePage = () =>{
     return(
 
+     
       <Home />
     );
   }
   return(
     <div>
 
-    <Header auth={this.props.auth}
-    loginUser={this.props.loginUser}
-    logoutUser={this.props.logoutUser}/>
-
+   
+  <Navbar/>
+  
 
   <UserAuth>
      <Switch>
@@ -48,7 +51,8 @@ render() {
       <Route path="/cart" component={Cart} />
       <Route path="/address" component={Address} />
       <Route path="/register" component={RegisterUser} />
-      <Route path="/login" component={Login} />
+      <Route path="/login" component={LoginUser} />
+      
       <Redirect to="/home" />
      </Switch>
      </UserAuth>

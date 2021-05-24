@@ -43,7 +43,14 @@
 });
 }
     </script>
+   <script>
+     var itemCount = 0;
 
+$('.add').click(function (){
+  itemCount ++;
+  $('#itemCount').html(itemCount).css('display', 'block');
+}); 
+   </script>
 
 
     <div id="root"> razor button</div>
@@ -59,5 +66,9 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react-dom.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<div id="app"></div>
   </body>
 </html>

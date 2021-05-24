@@ -95,3 +95,16 @@ box-shadow: 5px 10px 18px #888888;
 .rating{
   color: yellow;
 }
+
+#itemCount {
+  position: absolute;
+  display: none;
+  top: 2px;
+  right: 5px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: red;
+  color: white;
+  text-align: center;
+}

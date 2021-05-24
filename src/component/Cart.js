@@ -7,7 +7,7 @@ import { removeItem, addQuantity, subtractQuantity} from './actions/cartActions'
 import Recipe from './Recipe';
 import Headercart from './headcart';
 import Footer from './footer';
-
+import $ from 'jquery';
 class Cart extends Component{
 
   handleRemove =(id)=>{
@@ -20,6 +20,16 @@ class Cart extends Component{
 
   handleSubtractQuantity =(id)=>{
     this.props.subtractQuantity(id);
+  }
+
+  componentDidMount() {
+
+    var itemCount = 0;
+  
+  $('.add').click(function (){
+    itemCount ++;
+    $('#itemCount').html(itemCount).css('display', 'block');
+  }); 
   }
 
     render(){
@@ -72,7 +82,9 @@ class Cart extends Component{
             ):
 
              (
-                <p><h4>Cart is Empty.</h4></p>
+                <div className='img-fluid'  alt="empty cart">
+                  <img src="/assets/img/cart.png" />
+                </div>
              )
        return(
          <div className="home">

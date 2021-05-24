@@ -1,7 +1,9 @@
-import React, { Component } from 'react';
+import React, { Component , useContext, useEffect , Fragment} from 'react';
 import { Navbar ,NavbarBrand ,Nav ,Collapse ,NavItem, NavbarToggler,
 Button, Modal, ModalHeader, ModalBody, Form, FormGroup, Input, Label } from 'reactstrap';
-import { NavLink } from 'react-router-dom';
+import { NavLink , Link } from 'react-router-dom';
+import authContext from '../component/auth/AuthContext';
+
 
 class Header extends Component {
 

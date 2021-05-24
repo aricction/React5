@@ -54,7 +54,7 @@ const AuthState = props => {
               'Content-Type': 'application/json'
           }
 
-      }
+      };
       try {
           const res = await axios.post('/api/users', FormData, config);
           dispatch({
@@ -64,23 +64,56 @@ const AuthState = props => {
 
       } catch (err) {
           dispatch ({
-              type: REGISTER_USER,
+              type: REGISTRATION_FAILED,
               payload: err.response.data.msg
           });
       }
   };
+
+/** login user */
+  const loginuser = async formData => {
+    const config =  {
+        headers: {
+            'Content-Type': 'application/json'
+        }
+
+    }
+    try {
+        const res = await axios.post('/api/auth', formData, config);
+        dispatch({
+            type: LOGIN_USER,
+            payload: res.data
+        });
+
+    } catch (err) {
+        dispatch ({
+            type: LOGIN_FAILED,
+            payload: err.response.data.msg
+        });
+    }
+};
+
+const logout = () => {
+    dispatch({
+        type: LOGOUT
+    });
+};
   return (
-      <AuthContext.Provider value = {{
+      <AuthContext.Provider 
+      value = {{
           token: state.token,
           isAuthenticated: state.isAuthenticated,
           loading: state.loading,
           user: state.user,
           error: state.error,
-          registeruser
+          registeruser,
+          loadUser,
+          loginuser,
+          logout
       }}>
           {props.children}
       </AuthContext.Provider>
   );
 };
 
-export default AuthState
+export default AuthState;
