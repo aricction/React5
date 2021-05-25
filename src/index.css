@@ -96,6 +96,7 @@ box-shadow: 5px 10px 18px #888888;
   color: yellow;
 }
 
+/** item counter */
 #itemCount {
   position: absolute;
   display: none;

@@ -14,14 +14,15 @@
 
    <link rel="stylesheet" href="assets/css/styles.css">
 
-<script src="https://js.stripe.com/v3/"></script>
+
   </head>
   <body>
     <script>
     window.botpressWebChat.init({
        host: 'http://localhost:3001',
        botId: 'foodbot',
-
+       foregroundColor: '#0176ff',
+       backgroundColor: '#ffffff',
        botAvatarUrl:null,
        backgroundColor:'#0f0f0f',
        showUserName: false,
@@ -43,32 +44,12 @@
 });
 }
     </script>
-   <script>
-     var itemCount = 0;
-
-$('.add').click(function (){
-  itemCount ++;
-  $('#itemCount').html(itemCount).css('display', 'block');
-}); 
-   </script>
 
 
-    <div id="root"> razor button</div>
-<form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_H58B91I4tQyVsf" async> </script> </form>
+
+    <div id="root"></div>
+
   
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react-dom.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<div id="app"></div>
   </body>
 </html>

@@ -25,7 +25,7 @@ $('.add').click(function (){
 }
   handleClick = (id) => {
     this.props.addToCart(id);
-    alert("Added to cart successully!" + id);
+    alert("Added to cart successully!");
   }
   
 

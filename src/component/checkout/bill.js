@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import{Button, Form, FormGroup, Label, Input, FormText} from 'reactstrap';
 import GooglePayButton from "@google-pay/button-react";
-
+import PayByRazorPay from '../PayButton';
 
 export default function Payment() {
   const paymentRequest = {
@@ -56,6 +56,8 @@ export default function Payment() {
     
 
 <hr/>
+<PayByRazorPay/>  
+<hr/>
 <div className='radio1'>
       <FormGroup check>
       <Label check>
@@ -66,6 +68,7 @@ export default function Payment() {
 </div>
 <hr/>
 </div>
+
 </div>
     </div>
   );

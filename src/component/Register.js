@@ -38,6 +38,8 @@ import AuthContext from './auth/AuthContext';
          
      };
      return (
+         <div className='container'>
+             <div className='col'>
         <form onSubmit={onSubmit}>
         <div className="row">
             <div className="col-sm-4 ml-5">
@@ -66,7 +68,8 @@ import AuthContext from './auth/AuthContext';
         
 
     </form>
-
+    </div>
+    </div>
      )
  }
 

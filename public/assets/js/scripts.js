@@ -22,3 +22,9 @@ $(document).ready(function(){
       $("mycarousel").carousel( { interval: 2000} );
 });
 
+componentDidMount() {
+    $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+      e.target // newly activated tab
+      e.relatedTarget // previous active tab
+    })
+    };

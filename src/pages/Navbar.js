@@ -62,17 +62,17 @@ const Navbar = () => {
                     
                     
      
-            <NavItem>
+            <NavItem className="">
              <NavLink className="nav-link  text-dark" to="./register">
-              <span className=""></span> Register
+              <span className=""></span> Sign up
              </NavLink>
             </NavItem>
 
              
           
 
-            <NavItem>
-              <NavLink className="nav-link  text-dark" to="./login">
+            <NavItem className='login' >
+              <NavLink className="col nav-link  text-dark" to="./login">
                 <span className=""></span> Login
               </NavLink>
             </NavItem>
