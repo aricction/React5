@@ -7,7 +7,10 @@ import { Link , NavLink } from 'react-router-dom';
 import Footer from '../footer';
 import Payment from './bill';
 import classnames from 'classnames';
-
+import AllShip from './AllShip';
+import userAddress from './userAddress';
+import $ from 'jquery';
+import ModalAlert from './ModalAlert';
 
 class Address extends Component {
 
@@ -39,7 +42,6 @@ toggleModal(){
     isModalOpen: !this.state.isModalOpen
   });
 }
-
 
   render (){
 
@@ -165,22 +167,16 @@ toggleModal(){
 
           <TabPane tabId='3'> 
             <h3> content 3 </h3>
-            <Modal isOpen={this.state.isModalOpen} toggle={this.toggleModal}>
-               <div>
-               <Alert color='success'>
-                     <h4 className='alert-heading'>Congrats !</h4>
-                   <p> your order has been place</p>
-                   <p> Order :</p>
-                   <p> address :</p>
-                   <p> amount :</p>
-                   <p> Thank you for shopping with us.</p>
-               </Alert>
-               </div>
+            <div className='row'>
+            <div className='col-sm-9'>
+            <ModalAlert/>
+         <p>something</p> 
+          <AllShip/>
 
-            </Modal>
-             <Button onClick={this.toggleModal} color="primary">
-             <span>Confirm order</span>
-             </Button>
+            </div>
+            </div>
+           
+
           </TabPane>
         </TabContent>
         </Col>

@@ -1,6 +1,6 @@
 import React, { useState, useContext, useEffect } from 'react';
 import AuthContext from './auth/AuthContext';
-
+import AllShip from './checkout/AllShip';
 const Login = props => {
 
     const authContext = useContext(AuthContext);
@@ -38,7 +38,7 @@ const Login = props => {
     };
     return (
 
-        
+           
         <form onSubmit={onSubmit}>
         <div className="row">
             <div className="col-sm-4 ml-5">
@@ -61,7 +61,7 @@ const Login = props => {
         
 
     </form>
-    
+ 
     );
 } 
 
