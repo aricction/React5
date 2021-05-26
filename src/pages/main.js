@@ -15,6 +15,8 @@ import UserAuth from '../component/auth/AuthState';
 import AuthToken from '../component/auth/tokenAuth';
 import ShipState from '../component/Shipping/ShipState';
 import ProtectedRoute from '../component/auth/ProtectRoute';
+import EmployeeState from '../component/employee/EmployeeState';
+import Details from '../component/checkout/Details';
 
   if(localStorage.token){
       AuthToken(localStorage.token);
@@ -40,8 +42,10 @@ render() {
   
 
   <UserAuth>
+    <EmployeeState>
     <ShipState >
      <Switch>
+     <Route path="/Details" component={Details} />
       <Route path="/home" component={HomePage} />
       <Route path="/story" component={Story} />
       <Route exact path ="/contact" component={()=><Contact resetFeedbackForm={this.props.resetFeedbackForm} postFeedback={this.props.postFeedback} />} />
@@ -55,6 +59,7 @@ render() {
       <Redirect to="/home" />
      </Switch>
      </ShipState>
+     </EmployeeState>
      </UserAuth>
     </div>
 

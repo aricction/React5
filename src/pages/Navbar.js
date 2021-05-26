@@ -71,20 +71,11 @@ const Navbar = () => {
             </NavLink>
            </NavItem>
 
-           <NavItem className="">
-          <NavLink className="nav-link  text-dark" to="./register">
-           <span className=" ml-auto"></span>{!isAuthenticated && <a>Sign up</a>}
-          </NavLink>
-         </NavItem>
+      
 
           
        
 
-         <NavItem className='login' >
-           <NavLink className="col nav-link  text-dark" to="./login" onClick={toggleChecked}>
-         {!isAuthenticated && <a>Login</a>}
-           </NavLink>
-         </NavItem>
                     
          <li className='nav-item'>
        <Link className='nav-link' to='/'>
@@ -97,7 +88,22 @@ const Navbar = () => {
               {isAuthenticated ?<Button className='fa fa-sign-out'><a>logout</a></Button>  : <a></a>}
           </a>  
         </li>
- 
+        <NavItem>
+            <NavLink className="nav-link  text-dark" to="./Details">
+              <span className="bi bi-person-lines-fill"></span> detials
+            </NavLink>
+           </NavItem>
+           <NavItem className="">
+          <NavLink className="nav-link  text-dark" to="./register">
+           <span className=" ml-auto"></span>{!isAuthenticated && <a>Sign up</a>}
+          </NavLink>
+         </NavItem>
+         
+         <NavItem className='login' >
+           <NavLink className="col nav-link  text-dark" to="./login" onClick={toggleChecked}>
+         {!isAuthenticated && <a>Login</a>}
+           </NavLink>
+         </NavItem>
           
                   
                            </ul>
