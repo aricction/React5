@@ -84,5 +84,8 @@
   "bugs": {
     "url": "https://github.com/aricction/Reactweb2/issues"
   },
-  "homepage": "https://github.com/aricction/Reactweb2#readme"
+  "homepage": "https://github.com/aricction/Reactweb2#readme",
+  "engines": {
+    "node": "14.11.0"
+  }
 }
