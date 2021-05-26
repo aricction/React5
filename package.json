@@ -37,6 +37,7 @@
     "react-slideshow-image": "^3.4.6",
     "react-stripe-checkout": "^2.6.3",
     "react-transition-group": "^1.1.2",
+    "react-uuid": "^1.0.2",
     "reactstrap": "^8.9.0",
     "reactstrap-date-picker": "^0.0.11",
     "redirect": "^0.2.0",

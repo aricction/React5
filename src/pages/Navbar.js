@@ -81,7 +81,7 @@ const Navbar = () => {
        
 
          <NavItem className='login' >
-           <NavLink className="col nav-link  text-dark"  onClick={toggleChecked} to="./login">
+           <NavLink className="col nav-link  text-dark" to="./login" onClick={toggleChecked}>
          {!isAuthenticated && <a>Login</a>}
            </NavLink>
          </NavItem>
@@ -93,7 +93,7 @@ const Navbar = () => {
           </li>
 
           <li className='nav-item '>
-          <a onClick={Exit} className='nav-link text-dark' href='!#'>
+          <a onClick={Exit} className='nav-link text-dark'   href='!#'>
               {isAuthenticated ?<Button className='fa fa-sign-out'><a>logout</a></Button>  : <a></a>}
           </a>  
         </li>

@@ -11,6 +11,8 @@ import AllShip from './AllShip';
 import userAddress from './userAddress';
 import $ from 'jquery';
 import ModalAlert from './ModalAlert';
+import AddressForm from './AddressForm';
+
 
 class Address extends Component {
 
@@ -98,67 +100,7 @@ toggleModal(){
           <TabPane tabId='1'>
           <h4>Shipping Address</h4>
           <hr/>
-      <Form >
-      <Row >
-       <Col md={4}>
-        
-        <FormGroup>
-        
-        <Input type='text' name='firstname' placeholder='First Name' />
-         </FormGroup>
-        </Col>
-        <Col md={4}>
-         <FormGroup>
-           
-           <Input type="text"  placeholder='Last Name' required/>
-         </FormGroup>
-       </Col>
-       </Row>
-       <Row >
-         <Col md={4}>
-       <FormGroup>
-   
-        <Input type="text" name="phone no" required placeholder="phone no"/>
-      </FormGroup>
-    </Col>
-
-  <Col md={4}>
-<FormGroup>
-
- <Input type="email" name="email" required placeholder="Email"/>
-</FormGroup>
-</Col>
-
-</Row>
-  <Row >
-     <Col sm={8}>
-        <FormGroup>
-              <Label for="exampleAddress">Address</Label>
-              <Input type="text" required name="address" id="exampleAddress" placeholder="street name"/>
-              <Input type="text" className='mt-2' required name="address" id="exampleAddress" placeholder="Apartment, house no."/>
-        </FormGroup>
-       </Col>
-     </Row>
- <Row>
-   <Col sm={4}>
-    <FormGroup>
-
-     <Input type="text" placeholder="postal code" required />
-    </FormGroup>
-
-   </Col>
-   <Col sm={4}>
-    <FormGroup>
-
-     <Input type="text" placeholder="Town" />
-    </FormGroup>
-
-   </Col>
- </Row>
-
-  </Form>
-  
-  <Button className="button" color="primary"><span>Save & deliver here</span></Button>
+            <AddressForm/>
           </TabPane>
 
           <TabPane tabId='2'> 

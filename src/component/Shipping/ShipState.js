@@ -1,6 +1,7 @@
 import React, {useReducer} from 'react';
 import shipContext from './ShipContext';
 import ShipReducer from './ShipReducer';
+import uuid from 'react-uuid';
 import {
     SHIP_ADD,
  UPDATE_ADD
@@ -26,12 +27,20 @@ const ShipState = props => {
     const [state, dispatch] = useReducer(ShipReducer, initialState);
 
     /**actions */
+    const AddShippingAddress = shipping =>{
+        shipping.id = uuid();
+        dispatch({
+            type: SHIP_ADD,
+            payload: shipping
+        });
+    };
 
     return (
         <shipContext.Provider
         value = {
             {
-                shippingaddress: state.shippingaddress 
+                shippingaddress: state.shippingaddress ,
+                AddShippingAddress
             }
         }>
             { props.children}

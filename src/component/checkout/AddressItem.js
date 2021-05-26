@@ -7,10 +7,10 @@ const Addressitem = ({ address }) => {
     return (
          <div >
          <div className=''>
-         <p>{address.firstname}</p>
-         <p>{address.lastname}</p>
-         <p>{address.email}</p>  
-         <p>{address.phone}</p>         
+         <p>FirstName: {address.firstname}</p>
+         <p>LastName: {address.lastname}</p>
+         <p>Email: {address.email}</p>  
+         <p>Address: {address.phone}</p>         
 
          </div>
          </div>

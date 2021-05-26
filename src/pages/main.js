@@ -46,8 +46,8 @@ render() {
       <Route path="/story" component={Story} />
       <Route exact path ="/contact" component={()=><Contact resetFeedbackForm={this.props.resetFeedbackForm} postFeedback={this.props.postFeedback} />} />
       <Route path="/menu" component={() => <Menu dishes={this.props.dishes} />} />
-      <ProtectedRoute path="/shop" component={Shop} />
-      <ProtectedRoute path="/cart" component={Cart} />
+      <Route path="/shop" component={Shop} />
+      <Route path="/cart" component={Cart} />
       <Route path="/address" component={Address} />
       <Route path="/register" component={RegisterUser} />
       <Route path="/login" component={LoginUser} />

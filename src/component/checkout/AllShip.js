@@ -5,11 +5,12 @@ import Addressitem from './AddressItem';
 const AllShip = () => {
 
     const shipContext = useContext(ShipContext);
-    const {shippings} = shipContext; 
-    
+    const {shippings, getShipping, loading} = shipContext; 
+
+   
     return (       
   <Fragment>
-     {shippings && shippings.map(shipping => (
+     { shippings && shippings.map(shipping => (
         <Addressitem key={shipping.id} shipping ={shipping} />
      ))}
      </Fragment>
