@@ -10,6 +10,8 @@ import {Button, Form , FormGroup, Label, Input ,
  import classnames from 'classnames';
  import Payment from './bill';
 import ModalAlert from './ModalAlert';
+import Cart from '../Cart';
+import FinalCart from './FinalCart';
 
 
 const Details = props => {
@@ -34,9 +36,9 @@ const Details = props => {
 
 
 
-
     return(
-        <div className="container">
+      
+        <div className="container home">
            <div className="row">
                
            <Breadcrumb>
@@ -51,12 +53,12 @@ const Details = props => {
                   
      <Row>  
      <Col  xs="6" sm="4" md="4">  
-    <Nav tabs vertical pills>
+    <Nav className='tabs vertical pills'>
         <NavItem>
         <NavLink  to="#!"
             className={classnames({ active: activeTab === '1' })}
             onClick={() => { toggle('1'); }}>
-              <Button>Shipping Address</Button>
+              <Button>Delivery Address</Button>
               </NavLink>
         </NavItem>
         <NavItem>
@@ -83,32 +85,30 @@ const Details = props => {
           <TabPane tabId='1'>
         
                   <EmployeeForm/>
-          
 
           </TabPane>
           <TabPane tabId="2">
-          <Payment />
+             
+              <Payment />
+
           </TabPane>
 
           <TabPane tabId="3">
-           <div className='row'>
-               <div className='col-sm-9'>
-               <AllEmployess/>
-               <ModalAlert/>
-               </div>
           
-           </div>
-                  
-            
+
+               <AllEmployess/>
+               <FinalCart />
+               <hr/>
+               <ModalAlert/>
+               
+     
           </TabPane>
       </TabContent>
       </Col>
       </Row>
 
-     
-    
-
            </div>
+       
       
     )
 }

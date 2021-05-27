@@ -12,29 +12,29 @@ const Employeeitem = ({ employee }) => {
 
     return (
         <div>
-            <div className="card mt-3">
+          <p className='card-header'>SHIPPING DETAILS</p>
+          <hr/>
+            <div className=" mt-3">
       
             <div className="card-body">
             <p className="card-text">
-                firstname: {employee.firstname}
+                Name: {employee.firstname}  {employee.lastname}
+             </p>
+         
+             <p className="card-text">
+                 {employee.email}  {employee.phone}
              </p>
              <p className="card-text">
-                lastname: {employee.lastname}
-             </p>
-             <p className="card-text">
-                Email: {employee.email}
-             </p>
-             <p className="card-text">
-               Phone:  {employee.phone}
+              
              </p>
              <p className="card-text">
                address:  {employee.address}
              </p>
              <p className="card-text">
-               postalcode:  {employee.postalcode}
+               {employee.town} {employee.postalcode}
              </p>
              <p className="card-text">
-               town:  {employee.town}
+              
              </p>
                <a href="#" onClick={() => setCurrent(employee)} className="btn btn-primary">edit</a>
                <a href="#" onClick={onDelete}className="btn btn-danger ml-3">delete</a>

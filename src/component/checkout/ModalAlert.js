@@ -20,12 +20,14 @@ const ModalAlert = (props) => {
         <Alert color='success'  toggle={toggle}>
       
 
-                     <h4 className='alert-heading'>Congrats !</h4>
-                   <p> your order has been place</p>
-                   <p> Order :</p>
-                   <p> address :</p>
-                   <p> amount :</p>
-                   <p> Thank you for shopping with us.</p>
+                  <h4 className='alert-heading'>Thank you for shopping with us!</h4>
+                   <p className="card-header"> Order confirmed</p>
+                   <p> Purchased item :</p>
+                   <p> Shipping :</p>
+                   <hr/>
+                   <p> TOTAL :</p>
+                   <hr/>
+                   <p> Delivery Address</p>
                </Alert>
       </Modal>
     </div>

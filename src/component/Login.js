@@ -38,7 +38,7 @@ const Login = props => {
     };
     return (
 
-           
+          <div className='container'><div className='col'>
         <form onSubmit={onSubmit}>
         <div className="row">
             <div className="col-sm-4 ml-5">
@@ -61,6 +61,7 @@ const Login = props => {
         
 
     </form>
+    </div></div> 
  
     );
 } 
