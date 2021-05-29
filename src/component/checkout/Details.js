@@ -52,8 +52,9 @@ const Details = props => {
       <hr />         
                   
      <Row>  
-     <Col  xs="6" sm="4" md="4">  
+     <Col  xs="6" sm="1" md="2">  
     <Nav className='tabs vertical pills'>
+        <div className="">
         <NavItem>
         <NavLink  to="#!"
             className={classnames({ active: activeTab === '1' })}
@@ -61,6 +62,7 @@ const Details = props => {
               <Button>Delivery Address</Button>
               </NavLink>
         </NavItem>
+        </div>
         <NavItem>
         <NavLink   to="#!"
             className={classnames({ active: activeTab === '2' })}
@@ -88,9 +90,12 @@ const Details = props => {
 
           </TabPane>
           <TabPane tabId="2">
-             
-              <Payment />
+             <div className='row'>
+                 <div>
+                 <Payment />
 
+                 </div>
+             </div>
           </TabPane>
 
           <TabPane tabId="3">

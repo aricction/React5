@@ -61,7 +61,10 @@ const Login = props => {
         
 
     </form>
-    </div></div> 
+    </div>
+    
+   
+    </div> 
  
     );
 } 

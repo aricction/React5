@@ -19,6 +19,8 @@ import EmployeeState from '../component/employee/EmployeeState';
 import Details from '../component/checkout/Details';
 import Payment from '../component/checkout/bill';
 import FinalCart from '../component/checkout/FinalCart'
+import OrderConfirm from '../component/checkout/OrderConfirm';
+import Example from '../component/checkout/Example';
 
   if(localStorage.token){
       AuthToken(localStorage.token);
@@ -55,9 +57,11 @@ render() {
       <ProtectedRoute path="/shop" component={Shop} />
       <ProtectedRoute path="/cart" component={Cart} />
       <Route path="/bill" component={Payment} />
+      <Route path="/OrderConfirm" component={OrderConfirm} />
       <Route path="/address" component={Address} />
       <Route path="/register" component={RegisterUser} />
       <Route path="/login" component={LoginUser} />
+      <Route path="/Example" component={Example} />
       
       <Redirect to="/home" />
      </Switch>

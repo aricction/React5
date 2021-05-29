@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter , Alert} from 'reactstrap';
+import OrderConfirm from './OrderConfirm';
 
 const ModalAlert = (props) => {
   const {
@@ -13,7 +15,9 @@ const ModalAlert = (props) => {
 
   return (
     <div>
+      <NavLink to='./OrderConfirm'>
       <Button color="success" onClick={toggle}>Confirm Order</Button>
+      </NavLink>
       <Modal isOpen={modal} modalTransition={{ timeout: 700 }} backdropTransition={{ timeout: 1300 }}
         toggle={toggle} className={className}>
     

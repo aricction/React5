@@ -77,21 +77,11 @@ const Navbar = () => {
        
 
                     
-         <li className='nav-item'>
-       <Link className='nav-link' to='/'>
-     {isAuthenticated && 'welcome'}
-          </Link>
-          </li>
+        
 
-          <li className='nav-item '>
-          <a onClick={Exit} className='nav-link text-dark'   href='!#'>
-              {isAuthenticated ?<Button className='fa fa-sign-out'><a>logout</a></Button>  : <a></a>}
-          </a>  
-        </li>
+      
         <NavItem>
-            <NavLink className="nav-link  text-dark" to="./Details">
-              <span className="bi bi-person-lines-fill"></span> detials
-            </NavLink>
+
            </NavItem>
            <NavItem className="">
           <NavLink className="nav-link  text-dark" to="./register">
@@ -104,7 +94,11 @@ const Navbar = () => {
          {!isAuthenticated && <a>Login</a>}
            </NavLink>
          </NavItem>
-          
+         <li className='nav-item '>
+          <a onClick={Exit} className='nav-link text-dark'   href='!#'>
+              {isAuthenticated ?<Button className='fa fa-sign-out'><a>logout</a></Button>  : <a></a>}
+          </a>  
+        </li>
                   
                            </ul>
                       </div>

@@ -18,19 +18,7 @@ import {
 
 const EmployeeState = props =>{
     const initialState = {
-        employees : [ 
-            {
-                id:1,
-                firstname: 'aric',
-                lastname: 'ten',
-                phone: '9874563210',
-                email: "aric@xyz.com",
-                address: 'xyz',
-                postalcode: '456755',
-                town:'kbr'
-            }
-           
-         ],
+        employees : [],
         current: null
     };
     const [state, dispatch] = useReducer(EmployeeReducer, initialState);
@@ -40,9 +28,21 @@ const EmployeeState = props =>{
  
  /** add employee */
 
-    const AddEmployee = employee => {
-        employee.id = uuid();
-        dispatch({ type: ADD_EMP, payload: employee });
+    const AddEmployee = async employee => {
+        const config = {
+            Headers: {
+                'Content-Type': 'application/json'
+            }
+        }
+
+        try {
+            const res = await axios.post('/api/ShipAdd', employee, config);
+            dispatch({ type: ADD_EMP, payload: employee });
+
+        } catch (err) {
+           console.log(err);   
+        }
+       
    
     };
 

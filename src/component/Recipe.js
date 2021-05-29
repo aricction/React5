@@ -35,7 +35,7 @@ class Recipe extends Component{
                     <div className="container checkout">
                         <Button  type="submit" color="primary">
                             <span>
-                                <NavLink className="nav-link text-white" to="/Details">
+                                <NavLink className="nav-link text-white" to="/Example">
                                     Checkout
                                 </NavLink>
                             </span>

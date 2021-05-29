@@ -10,7 +10,7 @@ const AllEmployee = () => {
         return <h3 className='alert alert-danger'>Add address</h3>
     }
         return (
-        <Fragment>
+        <Fragment >
             {employees.map(employee => (
              <EmployeeItems key={employee.id} employee ={employee} />            
             ))}

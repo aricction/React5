@@ -1,10 +1,11 @@
-import React, {useContext } from 'react';
+import React, {useContext, useEffect } from 'react';
 import EmployeeContext from './employee/EmployeeContext';
 
 const Employeeitem = ({ employee }) => {
    const employeeContext = useContext(EmployeeContext);
+
    const {deleteEmployee, updateEmployee, setCurrent, clearCurrent } = employeeContext;
-    const {id, firstname, lastname, phone, email, designation, salary} = employee;
+    const {id, firstname, lastname, phone, email, address, postalcode, town} = employee;
     const onDelete = () => {
        deleteEmployee(id);
        clearCurrent();

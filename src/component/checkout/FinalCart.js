@@ -30,24 +30,25 @@ class FinalCart extends Component{
                 <div class="container">
                 
                 <div class="row">
-                  <div class="col">
-                      <div></div>
+                  <div class="col-sm">
+                   
                   <span className="foodname ">{item.title}</span>
                   </div>
+
                   <div class="col-5">
                   <span className="foodname "><b>Qty:{item.quantity}</b> </span>
                   </div>
+
                   <div class="col">
                   <p className='price'>
                   <b>Price: {item.price}₹</b>
-                 </p>
-                 <hr/>
-                
+                  </p>
+                  <hr/>
                   </div>
                  
-                </div>
-              </div>
-              </div>                              
+                  </div>
+                  </div>
+                  </div>                              
                     )
                 })
             ):
@@ -58,13 +59,13 @@ class FinalCart extends Component{
                 </div>
              )
        return(
-                <Fragment>
+                <div className='container'>
                     <p className='card-header'>YOUR ORDER</p>
                       <ul className="">
                         {addedItems}
                         <b>Total: {this.props.total} ₹</b>
                     </ul>
-                </Fragment>
+                </div>
                   
               
             
