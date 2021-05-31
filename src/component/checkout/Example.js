@@ -6,7 +6,7 @@ import Payment from './bill';
 import ModalAlert from './ModalAlert';
 import FinalCart from './FinalCart';
 import AllEmployess from '../AllEmployee';
-
+import Footer from '../footer';
 
 
 const Example = (props) => {
@@ -17,6 +17,7 @@ const Example = (props) => {
   }
 
   return (
+    <div className='home'> 
     <div className='container'>
       <Nav tabs>
         <NavItem>
@@ -76,6 +77,9 @@ const Example = (props) => {
           </Row>
         </TabPane>
       </TabContent>
+      
+    </div>
+    <Footer/>
     </div>
   );
 }

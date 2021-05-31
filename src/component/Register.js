@@ -1,11 +1,13 @@
 
 import React, { useContext, useState, useEffect} from 'react';
+import {Button, Form , FormGroup, Label, Input ,
+    Row, Col, NavItem } from 'reactstrap';
 import AuthContext from './auth/AuthContext';
-
+import Footer from './footer';
  
  const RegisterUser = props => {
      const authContext = useContext(AuthContext);
-      
+     const [loading, setLoading] = useState(false);
      const { registeruser , isAuthenticated } = authContext;
     
      useEffect(() => {
@@ -34,10 +36,11 @@ import AuthContext from './auth/AuthContext';
              name,
              email,
              password
-         });
+        });
          
-     };
+        setLoading(true) };
      return (
+         <div class='home'>
          <div className='container'>
              <div className='col'>
         <form onSubmit={onSubmit}>
@@ -60,7 +63,17 @@ import AuthContext from './auth/AuthContext';
               <label>Confirm password</label>
           <input className='form-control' type='password' required name='cpassword' value={cpassword} onChange={onChange} />
           </div>
-          <input name="button" className="btn btn-success" type='submit' value='Register ' />
+        
+          <FormGroup>
+                       <button  disabled={loading} 
+                       className="btn btn-success" type='submit' value='Register '
+                       >
+                           {loading && (
+                               <span className='spinner-border spinner-border-sm'></span>
+                           )}
+                           <span>Register</span>
+                       </button>
+                   </FormGroup>
 
 
             </div>
@@ -69,8 +82,12 @@ import AuthContext from './auth/AuthContext';
 
     </form>
     </div>
+   
     </div>
+ <Footer />
+   
+    </div>
+    
      )
  }
-
  export default RegisterUser;

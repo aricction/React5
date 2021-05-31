@@ -7,6 +7,7 @@ import Payment from '../component/checkout/bill';
 
 const EmployeeForm = props => {
     const employeeContext = useContext(EmployeeContext);
+    const [loading, setLoading] = useState(false);
     const {AddEmployee, updateEmployee, current, clearCurrent   } = employeeContext;
     useEffect(() => {
         if(current !== null)
@@ -49,11 +50,11 @@ const EmployeeForm = props => {
    if (current === null) {
        AddEmployee(employee);  
     
-   } else {
+     alert('saved') } else {
        updateEmployee(employee);
    }
       
-    };
+   };
 
     const ClearAll = () =>{
         clearCurrent();
@@ -125,7 +126,16 @@ const EmployeeForm = props => {
       
                  
                  <input  className="btn btn-success" type='submit'  value={ current ? 'Update now' : 'Save now'} />
-                
+                 <FormGroup>
+                       <button className='btn btn-success' type='submit' disabled={loading} 
+                        value={current ? 'update now' : 'save & deliver here'}  >
+                           {loading && (
+                               <span className='spinner-border spinner-border-sm'></span>
+                           )}
+<span>save</span>
+                    </button>
+                   </FormGroup>
+
           
            
             {current && (

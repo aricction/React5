@@ -5,7 +5,7 @@ const shortid = require("shortid");
 
 const PayByRazorPay = () => {
     const options = {
-        key: 'rzp_test_uMhKKyfzbOuo4I',
+        key: 'your key',
         amount: '100', //  = INR 1
         name: 'Gorumet food&more',
         description: 'some description',

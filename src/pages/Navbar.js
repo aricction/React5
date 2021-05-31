@@ -1,5 +1,5 @@
 import React, { useContext, useState,useEffect, Fragment }from 'react';
-import { Button , NavbarBrand , Nav  ,NavItem } from 'reactstrap';
+import { Button , NavbarBrand , Nav  ,NavItem, FormGroup } from 'reactstrap';
 import "bootstrap/js/src/collapse.js";     
 import { NavLink, Link} from 'react-router-dom';
 import authContext from '../component/auth/AuthContext';
@@ -9,15 +9,17 @@ import authContext from '../component/auth/AuthContext';
 const Navbar = () => {
   const[isAuthenticated , setisAuthenticated] = useState(false);
  const toggleChecked = () => setisAuthenticated(value => !value);   
-  
+ const [loading, setLoading] = useState(false);
   const authcontext = useContext(authContext);
 
   const user = authcontext;
   const logout = authcontext;
 
   const Exit = () => {
-    logout();
-  }; 
+    setLoading(true)
+    logout()
+    
+ }; 
 
 
     return (
@@ -94,11 +96,18 @@ const Navbar = () => {
          {!isAuthenticated && <a>Login</a>}
            </NavLink>
          </NavItem>
+
+
          <li className='nav-item '>
           <a onClick={Exit} className='nav-link text-dark'   href='!#'>
-              {isAuthenticated ?<Button className='fa fa-sign-out'><a>logout</a></Button>  : <a></a>}
+              {isAuthenticated ?<Button disabled={loading}>
+              {loading && (
+                               <span className='spinner-border spinner-border-sm'></span>
+                           )}
+                <span className='fa fa-sign-out'>logout</span></Button>  : <a></a>}
           </a>  
         </li>
+       
                   
                            </ul>
                       </div>

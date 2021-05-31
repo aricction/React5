@@ -10,13 +10,18 @@ const ModalAlert = (props) => {
   } = props;
 
   const [modal, setModal] = useState(false);
-
-  const toggle = () => setModal(!modal);
+  const [loading, setLoading] = useState(false);
+  const toggle = () => setLoading(true);
 
   return (
     <div>
       <NavLink to='./OrderConfirm'>
-      <Button color="success" onClick={toggle}>Confirm Order</Button>
+      <Button color="success"  disabled={loading} onClick={toggle} >
+      {loading && (
+      <span className='spinner-border spinner-border-sm'></span>
+        )}
+        <span>Confirm Order</span></Button>
+
       </NavLink>
       <Modal isOpen={modal} modalTransition={{ timeout: 700 }} backdropTransition={{ timeout: 1300 }}
         toggle={toggle} className={className}>

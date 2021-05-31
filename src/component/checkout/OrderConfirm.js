@@ -6,10 +6,13 @@ import classnames from 'classnames';
 import AuthContext from '../auth/AuthContext';
 import Employeeitem from '../Employeeitem';
 import { Button} from 'reactstrap';
+import Footer from '../footer';
 
 const OrderConfirm = () => {
   
     return (
+
+      <div  className='home'> 
 <div class="container">
   <div class="row justify-content-center">
       <div className='col'>
@@ -38,6 +41,8 @@ const OrderConfirm = () => {
 <NavLink to='/home'>
 <Button>continue with food</Button>
 </NavLink>
+</div>
+<Footer/>
 </div>
     )
 }

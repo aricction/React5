@@ -1,11 +1,19 @@
 import React, { useState, useContext, useEffect } from 'react';
+import {Button, Form , FormGroup, Label, Input ,
+    Row, Col, NavItem } from 'reactstrap';
+import { useDispatch,  useSelector } from "react-redux";
 import AuthContext from './auth/AuthContext';
 import AllShip from './checkout/AllShip';
+import Footer from './footer';
+
+
 const Login = props => {
 
     const authContext = useContext(AuthContext);
-      
+    const [loading, setLoading] = useState(false);
     const { loginuser, isAuthenticated } = authContext;
+
+  
 
     useEffect(() => {
         if (isAuthenticated){
@@ -35,36 +43,45 @@ const Login = props => {
             password
         });
         
-    };
+    setLoading(true)};
     return (
-
-          <div className='container'><div className='col'>
-        <form onSubmit={onSubmit}>
-        <div className="row">
-            <div className="col-sm-4 ml-5">
-            <h3>Login user</h3>
         
-          <div className="form-group">
-              <label>Enter email</label>
-          <input className='form-control' type='email' name='email' required value={email} onChange={onChange} />
-          </div>
-          <div className="form-group">
-              <label>Enter password</label>
-          <input className='form-control' type='password' required name='password' value={password} onChange={onChange} />
-          </div>
+       <div className='container'>
+            <h3 className='row justify-content-center'>LOGIN</h3>
+           <div className='col col-sm-9'>
+               
          
-          <input name="button" className="btn btn-success" type='submit' value='Login ' />
+               <div className=' row justify-content-center'>
+         
+               
+               <form onSubmit={onSubmit}>
+                   <FormGroup md={8}>
+                       <Label>Email</Label>
+                       <Input type='email' className='form-control'  required name='email'
+                       value={email} onChange={onChange} />
+                   </FormGroup>
 
+                   <FormGroup>
+                       <Label>Password</Label>
+                       <Input type='password'  name='password' required value={password} onChange={onChange} />
+                   </FormGroup>
 
-            </div>
-        </div>
-        
+                   <FormGroup>
+                       <button className='btn btn-primary btn-block' disabled={loading}>
+                           {loading && (
+                               <span className='spinner-border spinner-border-sm'></span>
+                           )}
+                           <span>Login</span>
+                       </button>
+                   </FormGroup>
 
-    </form>
-    </div>
-    
-   
-    </div> 
+      
+
+               </form>
+
+           </div>
+           </div>
+       </div>
  
     );
 } 
