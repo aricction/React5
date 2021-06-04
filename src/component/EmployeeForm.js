@@ -132,7 +132,7 @@ const EmployeeForm = props => {
                            {loading && (
                                <span className='spinner-border spinner-border-sm'></span>
                            )}
-<span>save</span>
+                          <span>save</span>
                     </button>
                    </FormGroup>
 

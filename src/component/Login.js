@@ -45,7 +45,7 @@ const Login = props => {
         
     setLoading(true)};
     return (
-        
+        <div>
        <div className='container'>
             <h3 className='row justify-content-center'>LOGIN</h3>
            <div className='col col-sm-9'>
@@ -82,7 +82,8 @@ const Login = props => {
            </div>
            </div>
        </div>
- 
+       <Footer/>
+       </div>
     );
 } 
 
